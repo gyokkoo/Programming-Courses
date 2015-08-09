@@ -19,7 +19,7 @@ class BiggerNumber
 
     static int GetMax(int firstNumber, int secondNumber)
     {
-        int maxNumber = 0;
+        int maxNumber = int.MinValue;
 
         if (firstNumber >= secondNumber)
         {

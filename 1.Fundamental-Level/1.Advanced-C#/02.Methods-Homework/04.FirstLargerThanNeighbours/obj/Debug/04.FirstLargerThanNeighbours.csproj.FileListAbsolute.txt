@@ -1,0 +1,6 @@
+D:\Softuni\Advanced-C#\2.Advanced-CSharp-Methods\Methods-Homework\04.FirstLargerThanNeighbours\bin\Debug\04.FirstLargerThanNeighbours.exe.config
+D:\Softuni\Advanced-C#\2.Advanced-CSharp-Methods\Methods-Homework\04.FirstLargerThanNeighbours\bin\Debug\04.FirstLargerThanNeighbours.exe
+D:\Softuni\Advanced-C#\2.Advanced-CSharp-Methods\Methods-Homework\04.FirstLargerThanNeighbours\bin\Debug\04.FirstLargerThanNeighbours.pdb
+D:\Softuni\Advanced-C#\2.Advanced-CSharp-Methods\Methods-Homework\04.FirstLargerThanNeighbours\obj\Debug\04.FirstLargerThanNeighbours.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\2.Advanced-CSharp-Methods\Methods-Homework\04.FirstLargerThanNeighbours\obj\Debug\04.FirstLargerThanNeighbours.exe
+D:\Softuni\Advanced-C#\2.Advanced-CSharp-Methods\Methods-Homework\04.FirstLargerThanNeighbours\obj\Debug\04.FirstLargerThanNeighbours.pdb
