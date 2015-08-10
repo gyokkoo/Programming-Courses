@@ -42,6 +42,7 @@ class LargerThanNeighbours
                 isLarger = (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1]) ? true : false;
             }
         }
+
         return isLarger;
     }
 }

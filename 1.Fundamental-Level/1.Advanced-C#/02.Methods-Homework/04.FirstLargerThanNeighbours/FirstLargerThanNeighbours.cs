@@ -18,16 +18,40 @@ class FirstLargerThanNeighbours
 
     static int GetIndexOfFirstElementLargerThanNeighbours(int[] numbers)
     {
-        int index = -1;
-
-        for (int i = 1; i < numbers.Length - 1; i++)
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if (numbers[i - 1] < numbers[i] && numbers[i] > numbers[i + 1])
+            if (IsLargerThanNeighbours(numbers, i))
             {
-                index = i;
+                return i;
             }
         }
-   
-        return index;
+
+        return -1;
+    }
+    static bool IsLargerThanNeighbours(int[] numbers, int i)
+    {
+        bool isLarger = false;
+
+        if (numbers.Length == 1)
+        {
+            isLarger = false;
+        }
+        else
+        {
+            if (i == 0)
+            {
+                isLarger = numbers[i] > numbers[i + 1] ? true : false;
+            }
+            else if (i == numbers.Length - 1)
+            {
+                isLarger = numbers[i] > numbers[i - 1] ? true : false;
+            }
+            else
+            {
+                isLarger = (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1]) ? true : false;
+            }
+        }
+
+        return isLarger;
     }
 }

@@ -8,8 +8,8 @@ class ReverseNumber
     static void Main()
     {
         Console.Title = "Problem 5.	Reverse Number";
-        Console.WriteLine("Enter floating-point number.");
 
+        Console.WriteLine("Enter floating-point number.");
         double number = double.Parse(Console.ReadLine());
 
         double reversed = GetReversedNumber(number);
@@ -18,10 +18,13 @@ class ReverseNumber
 
     static double GetReversedNumber(double number)
     {
-        char[] numberAsCharArr = number.ToString().TrimStart('-').ToCharArray();
+        string numberAsString = number.ToString().TrimStart('-');
+        string reversedNumberAsString = "";
 
-        Array.Reverse(numberAsCharArr);
-        string reversedNumberAsString = new string(numberAsCharArr);
+        for (int i = numberAsString.Length - 1; i >= 0; i--)
+        {
+            reversedNumberAsString += numberAsString[i];
+        }
 
         double reversedNumber = double.Parse(reversedNumberAsString);
 
