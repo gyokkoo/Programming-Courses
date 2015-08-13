@@ -1,1 +1,0 @@
-D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\06.CountSymbols\bin\Debug\06.CountSymbols.exe.config

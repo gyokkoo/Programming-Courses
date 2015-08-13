@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CollectTheCoins", "05.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CountSymbols", "06.CountSymbols\06.CountSymbols.csproj", "{057A3721-06FF-48EE-B944-C8DC52EF0833}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Phonebook", "07.Phonebook\07.Phonebook.csproj", "{AF3328C6-FB33-4125-8BA1-0C683528E11A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.NightLife", "08.NightLife\08.NightLife.csproj", "{45084112-1E1F-4D38-9D06-98FD56937157}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{057A3721-06FF-48EE-B944-C8DC52EF0833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{057A3721-06FF-48EE-B944-C8DC52EF0833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{057A3721-06FF-48EE-B944-C8DC52EF0833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3328C6-FB33-4125-8BA1-0C683528E11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3328C6-FB33-4125-8BA1-0C683528E11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3328C6-FB33-4125-8BA1-0C683528E11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3328C6-FB33-4125-8BA1-0C683528E11A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45084112-1E1F-4D38-9D06-98FD56937157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45084112-1E1F-4D38-9D06-98FD56937157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45084112-1E1F-4D38-9D06-98FD56937157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45084112-1E1F-4D38-9D06-98FD56937157}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
