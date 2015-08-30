@@ -1,0 +1,6 @@
+D:\Softuni\Advanced-C#\9.LAB\Algorithms-Lab\4.BinarySearch\bin\Debug\4.BinarySearch.exe.config
+D:\Softuni\Advanced-C#\9.LAB\Algorithms-Lab\4.BinarySearch\obj\Debug\4.BinarySearch.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\9.LAB\Algorithms-Lab\4.BinarySearch\bin\Debug\4.BinarySearch.exe
+D:\Softuni\Advanced-C#\9.LAB\Algorithms-Lab\4.BinarySearch\bin\Debug\4.BinarySearch.pdb
+D:\Softuni\Advanced-C#\9.LAB\Algorithms-Lab\4.BinarySearch\obj\Debug\4.BinarySearch.exe
+D:\Softuni\Advanced-C#\9.LAB\Algorithms-Lab\4.BinarySearch\obj\Debug\4.BinarySearch.pdb
