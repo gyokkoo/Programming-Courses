@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SumTwoNumbers {
+public class _06_SumTwoNumbers {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the first number: ");

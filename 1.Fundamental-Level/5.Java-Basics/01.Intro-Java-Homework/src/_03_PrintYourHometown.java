@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PrintHometown {
+public class _03_PrintYourHometown {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter your hometown: ");
