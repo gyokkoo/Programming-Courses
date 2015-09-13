@@ -1,0 +1,6 @@
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\04.SequenceEqualElements\bin\Debug\04.SequenceEqualElements.exe.config
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\04.SequenceEqualElements\bin\Debug\04.SequenceEqualElements.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\04.SequenceEqualElements\bin\Debug\04.SequenceEqualElements.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\04.SequenceEqualElements\obj\Debug\04.SequenceEqualElements.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\04.SequenceEqualElements\obj\Debug\04.SequenceEqualElements.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\04.SequenceEqualElements\obj\Debug\04.SequenceEqualElements.pdb

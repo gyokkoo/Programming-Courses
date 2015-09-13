@@ -1,0 +1,5 @@
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\03.CompareCharArrays\bin\Debug\03.CompareCharArrays.exe.config
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\03.CompareCharArrays\bin\Debug\03.CompareCharArrays.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\03.CompareCharArrays\bin\Debug\03.CompareCharArrays.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\03.CompareCharArrays\obj\Debug\03.CompareCharArrays.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\03.CompareCharArrays\obj\Debug\03.CompareCharArrays.pdb

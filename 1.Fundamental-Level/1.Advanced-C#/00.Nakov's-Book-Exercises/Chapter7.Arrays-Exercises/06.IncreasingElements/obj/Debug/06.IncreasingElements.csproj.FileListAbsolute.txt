@@ -1,0 +1,6 @@
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\06.IncreasingElements\bin\Debug\06.IncreasingElements.exe.config
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\06.IncreasingElements\obj\Debug\06.IncreasingElements.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\06.IncreasingElements\bin\Debug\06.IncreasingElements.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\06.IncreasingElements\bin\Debug\06.IncreasingElements.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\06.IncreasingElements\obj\Debug\06.IncreasingElements.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\06.IncreasingElements\obj\Debug\06.IncreasingElements.pdb

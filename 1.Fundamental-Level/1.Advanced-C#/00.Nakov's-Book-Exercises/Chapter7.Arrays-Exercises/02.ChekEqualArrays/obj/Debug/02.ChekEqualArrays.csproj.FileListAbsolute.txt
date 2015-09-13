@@ -1,0 +1,5 @@
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\02.ChekEqualArrays\bin\Debug\02.ChekEqualArrays.exe.config
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\02.ChekEqualArrays\bin\Debug\02.ChekEqualArrays.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\02.ChekEqualArrays\bin\Debug\02.ChekEqualArrays.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\02.ChekEqualArrays\obj\Debug\02.ChekEqualArrays.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\02.ChekEqualArrays\obj\Debug\02.ChekEqualArrays.pdb

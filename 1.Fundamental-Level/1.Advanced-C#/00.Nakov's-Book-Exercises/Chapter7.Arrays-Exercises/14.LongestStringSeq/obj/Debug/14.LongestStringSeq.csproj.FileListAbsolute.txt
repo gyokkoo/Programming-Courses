@@ -1,0 +1,5 @@
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.exe.config
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\obj\Debug\14.LongestStringSeq.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\obj\Debug\14.LongestStringSeq.pdb

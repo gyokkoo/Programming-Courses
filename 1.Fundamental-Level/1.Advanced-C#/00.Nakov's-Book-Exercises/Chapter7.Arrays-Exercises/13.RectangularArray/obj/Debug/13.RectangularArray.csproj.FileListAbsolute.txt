@@ -1,0 +1,6 @@
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\13.RectangularArray\bin\Debug\13.RectangularArray.exe.config
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\13.RectangularArray\bin\Debug\13.RectangularArray.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\13.RectangularArray\bin\Debug\13.RectangularArray.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\13.RectangularArray\obj\Debug\13.RectangularArray.exe
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\13.RectangularArray\obj\Debug\13.RectangularArray.pdb
+D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\13.RectangularArray\obj\Debug\13.RectangularArray.csprojResolveAssemblyReference.cache
