@@ -8,7 +8,7 @@ Print the sequences in the order of their appearance in the input array, each at
 Separate the sequence elements by a space. Find also the longest increasing sequence and print it at the last line. 
 If several sequences have the same longest length, print the left-most of them. Examples:
 Input	                Output
-2 3 4 1 50 2 3 4 5	    2 3 4
+2 3 4 1 50 2 3 4 5	 2 3 4
                         1 50
                         2 3 4 5
                         Longest: 2 3 4 5
