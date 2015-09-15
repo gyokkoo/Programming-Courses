@@ -15,11 +15,11 @@ class SortArrayOfNumbers
         Console.WriteLine("Enter numbers on a single line, separated by a space.");
 
         Console.Write("Enter order  ---> ");
-        int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int[] arrayOfNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        Array.Sort(arr);
+        Array.Sort(arrayOfNumbers);
 
-        string sortedArr = string.Join(" ", arr);
+        string sortedArr = string.Join(" ", arrayOfNumbers);
         Console.WriteLine("Sorted order ---> {0}", sortedArr);
     }
 }

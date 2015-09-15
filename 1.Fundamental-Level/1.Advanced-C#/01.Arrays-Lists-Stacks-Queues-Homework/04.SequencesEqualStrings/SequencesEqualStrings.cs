@@ -15,21 +15,21 @@ class SequencesEqualStrings
         Console.Title = "Problem 4.	Sequences of Equal Strings";
         Console.WriteLine("Enter an array of strings, in a single line, separated by a space.");
 
-        string[] inputArr = Console.ReadLine().Split(' ').ToArray();
+        string[] arrayOfStrings = Console.ReadLine().Split(' ').ToArray();
 
         Console.WriteLine("The sequences are:");
 
-        for (int i = 0; i < inputArr.Length - 1; i++)
+        for (int i = 0; i < arrayOfStrings.Length - 1; i++)
         {
-            if (inputArr[i] != inputArr[i + 1])
+            if (arrayOfStrings[i] != arrayOfStrings[i + 1])
             {
-                Console.WriteLine(inputArr[i]);
+                Console.WriteLine(arrayOfStrings[i]);
             }
             else
             {
-                Console.Write(inputArr[i] + " ");
+                Console.Write(arrayOfStrings[i] + " ");
             }
         }
-        Console.WriteLine(inputArr[inputArr.Length - 1]);
+        Console.WriteLine(arrayOfStrings[arrayOfStrings.Length - 1]);
     }
 }

@@ -18,20 +18,20 @@ class CategorizeNumbers
         Console.Title = "Problem 3.	Categorize Numbers and Find Min / Max / Average";
         Console.WriteLine("Enter floating-point numbers, on a single line, seperated by a space.");
 
-        double[] arr = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+        double[] arrayOfNums = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
 
         List<double> roundNumbers = new List<double>();
         List<double> floatingPointNumbers = new List<double>();
 
-        for (int i = 0; i < arr.Length; i++)
+        for (int i = 0; i < arrayOfNums.Length; i++)
         {
-            if (arr[i] % 1 != 0)
+            if (IsRoundNumber(arrayOfNums[i]))
             {
-                floatingPointNumbers.Add(arr[i]);
+                roundNumbers.Add(arrayOfNums[i]);
             }
-            else if (arr[i] % 1 == 0)
+            else
             {
-                roundNumbers.Add(arr[i]);
+                floatingPointNumbers.Add(arrayOfNums[i]);
             }
         }
 
@@ -44,5 +44,20 @@ class CategorizeNumbers
             floatingPointNumbers.Max(), floatingPointNumbers.Sum(), floatingPointNumbers.Average());
         Console.WriteLine("[{0}] -> min: {1}, max: {2}, sum: {3}, avg: {4:F2}", secondGroup, roundNumbers.Min(),
             roundNumbers.Max(), roundNumbers.Sum(), roundNumbers.Average());
+    }
+
+    static bool IsRoundNumber(double number)
+    {
+        bool isRoundNumber = false;
+        if (number % 1 == 0)
+        {
+            isRoundNumber = true;
+        }
+        else if (number % 1 != 0)
+        {
+            isRoundNumber = false;
+        }
+
+        return isRoundNumber;
     }
 }
