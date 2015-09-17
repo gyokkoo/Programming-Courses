@@ -11,9 +11,9 @@ class FirstLargerThanNeighbours
         Console.Title = "Problem 4.	First Larger Than Neighbours";
         Console.WriteLine("Enter an array of number, separated by a space.");
 
-        int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int[] arrayOfNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        Console.WriteLine(GetIndexOfFirstElementLargerThanNeighbours(numbers));
+        Console.WriteLine(GetIndexOfFirstElementLargerThanNeighbours(arrayOfNumbers));
     }
 
     static int GetIndexOfFirstElementLargerThanNeighbours(int[] numbers)
