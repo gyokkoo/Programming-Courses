@@ -4,6 +4,14 @@ using System.Linq;
 Write a program to sort an array of integer numbers and then print them back on the console. 
 The numbers should be entered from the console on a single line, separated by a space. 
 Print the sorted array in the following format: “[element1, element2… elementN]”.
+
+Condition: Do not use the built-in sorting method, you should write the logic yourself. 
+Use the bubble sort algorithm. 
+
+Input:        
+6 5 4 10 -3 120 4
+Output:
+[-3, 4, 4, 5, 6, 10, 120]
 */
 class BubbleSort
 {
@@ -12,31 +20,34 @@ class BubbleSort
         Console.Title = "Problem 1. Sort Array of Numbers Using Bubble Sort";
 
         Console.WriteLine("Enter numbers on a singe line, separated by a space.");
-        Console.Write("Enter order  ---> ");
 
-        int[] arrNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int[] arrayOfNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        for (int i = 0; i < arrNumbers.Length; i++)
+        for (int i = 0; i < arrayOfNumbers.Length - 1; i++)
         {
-            BubbleSortStep(arrNumbers);
+            BubbleSortStep(arrayOfNumbers);
         }
 
-        Console.Write("Sorted order ---> ");
-        Console.WriteLine(string.Join(" ", arrNumbers));       
+        Console.WriteLine("The numbers in sorted order:");
+        Console.WriteLine("[" + string.Join(", ", arrayOfNumbers) + "]");
     }
 
-    static int[] BubbleSortStep(int[] arrNumbers)
+    static void BubbleSortStep(int[] arrayOfNumbers)
     {
-        int temp = arrNumbers[0];
-        for (int i = 1; i <= arrNumbers.Length - 1; i++)
+        for (int i = 0; i < arrayOfNumbers.Length - 1; i++)
         {
-            if (arrNumbers[i - 1] > arrNumbers[i])
+            int j = i + 1;
+            if (arrayOfNumbers[i] > arrayOfNumbers[j])
             {
-                temp = arrNumbers[i - 1];
-                arrNumbers[i - 1] = arrNumbers[i];
-                arrNumbers[i] = temp;
+                SwapElementsInArray(i, j, arrayOfNumbers);
             }
         }
-        return arrNumbers;
+    }
+
+    static void SwapElementsInArray(int i, int j, int[] arrayOfNumbers)
+    {
+        int exchangeValue = arrayOfNumbers[i];
+        arrayOfNumbers[i] = arrayOfNumbers[j];
+        arrayOfNumbers[j] = exchangeValue;
     }
 }

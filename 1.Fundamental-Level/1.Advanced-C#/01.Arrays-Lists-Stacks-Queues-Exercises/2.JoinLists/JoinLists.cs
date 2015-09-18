@@ -12,43 +12,43 @@ class JoinLists
     static void Main()
     {
         Console.Title = "Problem 2. Join Lists";
+
+        SortedSet<int> joinedList = new SortedSet<int>();
+
         Console.WriteLine("Enter two lists of integers, seperated by a space.");
 
-        List<int> list = new List<int>();
-
-        Console.Write("First list  ---> ");
-        string firstInput = Console.ReadLine();
-        string[] firstInputStrArr = firstInput.Split(' ');
-        int[] firstNumsArr = new int[firstInputStrArr.Length];
-
-        for (int i = 0; i < firstNumsArr.Length; i++)
+        List<int> firstList = new List<int>();
+        string[] firstInputLineArr = Console.ReadLine().Split(' ');
+        for (int i = 0; i < firstInputLineArr.Length; i++)
         {
-            firstNumsArr[i] = int.Parse(firstInputStrArr[i]);
-            if (list.IndexOf(firstNumsArr[i]) == -1)
+            firstList.Add(int.Parse((firstInputLineArr[i])));
+
+            int currentNumber = firstList[i];
+
+            if (!joinedList.Contains(currentNumber))
             {
-                list.Add(firstNumsArr[i]);
+                joinedList.Add(currentNumber);
             }
         }
 
-        Console.Write("Second list ---> ");
-        string secondInput = Console.ReadLine();
-        string[] secondInputStrArr = secondInput.Split(' ');
-        int[] secondNumsArr = new int[secondInputStrArr.Length];
-
-        for (int i = 0; i < secondNumsArr.Length; i++)
+        List<int> secondList = new List<int>();
+        string[] secondInputLineArr = Console.ReadLine().Split(' ');
+        for (int i = 0; i < secondInputLineArr.Length; i++)
         {
-            secondNumsArr[i] = int.Parse(secondInputStrArr[i]);
-            if (list.IndexOf(secondNumsArr[i]) == -1)
+            secondList.Add(int.Parse((secondInputLineArr[i])));
+
+            int currentNumber = secondList[i];
+
+            if (!joinedList.Contains(currentNumber))
             {
-                list.Add(secondNumsArr[i]);
+                joinedList.Add(currentNumber);
             }
         }
 
-        list.Sort();
-
-        foreach (int num in list)
+        Console.WriteLine("The joined list:");
+        foreach (int number in joinedList)
         {
-            Console.Write(num + " ");
+            Console.Write(number + " ");
         }
         Console.WriteLine();
     }
