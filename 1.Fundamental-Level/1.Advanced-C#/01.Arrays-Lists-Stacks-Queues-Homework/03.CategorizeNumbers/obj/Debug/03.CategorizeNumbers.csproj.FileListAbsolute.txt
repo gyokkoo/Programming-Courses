@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\03.CategorizeNumbers\bin\Debug\03.CategorizeNumbers.exe.config
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\03.CategorizeNumbers\bin\Debug\03.CategorizeNumbers.exe
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\03.CategorizeNumbers\bin\Debug\03.CategorizeNumbers.pdb
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\03.CategorizeNumbers\obj\Debug\03.CategorizeNumbers.exe
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\03.CategorizeNumbers\obj\Debug\03.CategorizeNumbers.pdb
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\03.CategorizeNumbers\obj\Debug\03.CategorizeNumbers.csprojResolveAssemblyReference.cache

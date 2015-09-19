@@ -1,1 +1,0 @@
-D:\Softuni\Advanced-C#\1.Arrays-Lists-Stacks-Queues\Advanced-CSharp-Arrays-Homework\05.LongestSequence\bin\Debug\05.LongestSequence.exe.config

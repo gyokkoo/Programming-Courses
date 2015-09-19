@@ -23,23 +23,23 @@ class SubsetSums
         int targetSum = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Ener an array of integers:");
-        int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int[] arrayOfNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         bool isFound = false;
 
         Console.WriteLine("The unique subsets with sum {0} are:", targetSum);
 
-        int numOfSubsets = 1 << numbers.Length;
+        int numOfSubsets = 1 << arrayOfNumbers.Length;
         for (int i = 0; i < numOfSubsets; i++)
         {
             List<int> subset = new List<int>();
-            int index = numbers.Length - 1;
+            int index = arrayOfNumbers.Length - 1;
             int bitMask = i;
 
             while (bitMask > 0)
             {
                 if ((bitMask & 1) == 1)
                 {
-                    subset.Add(numbers[index]);
+                    subset.Add(arrayOfNumbers[index]);
                 }
 
                 bitMask = bitMask >> 1;

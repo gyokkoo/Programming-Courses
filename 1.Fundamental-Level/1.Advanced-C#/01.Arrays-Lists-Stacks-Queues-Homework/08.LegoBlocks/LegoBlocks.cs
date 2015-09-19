@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+
 /*
 This problem is from the Java Basics Exam (8 February 2015).  
  */
@@ -10,59 +10,106 @@ class LegoBlocks
     {
         int n = int.Parse(Console.ReadLine());
 
-        string[][] firstJaggedArr = new string[n][];
-        string[][] secondJaggedArr = new string[n][];
+        int[][] firstJaggedArray = new int[n][];
+        int[][] secondJaggedArray = new int[n][];
 
-        char[] emptySpace = new char[] { ' ', '\t' };
+        FillJaggedArray(firstJaggedArray);
+        FillJaggedArray(secondJaggedArray);
 
-        for (int i = 0; i < n; i++)
+        ReverseJaggedArray(secondJaggedArray);
+
+        int[][] legoMatrix = new int[n][];
+
+        if (IsFitting(firstJaggedArray, secondJaggedArray))
         {
-            string firstRaw = Console.ReadLine().Trim();
-            firstJaggedArr[i] = firstRaw.Split(emptySpace, StringSplitOptions.RemoveEmptyEntries).ToArray().ToArray();
-        }
-
-        for (int i = 0; i < n; i++)
-        {
-            string secondRaw = Console.ReadLine().Trim();
-            secondJaggedArr[i] = secondRaw.Split(emptySpace, StringSplitOptions.RemoveEmptyEntries).ToArray().ToArray();
-
-            Array.Reverse(secondJaggedArr[i]);
-        }
-
-        bool isFit = true;
-
-        int legoRowLenght = firstJaggedArr[0].Length + secondJaggedArr[0].Length;
-        int allBlocksCounter = legoRowLenght;
-
-        for (int i = 1; i < n; i++)
-        {
-            int leftSide = firstJaggedArr[i].Length;
-            int rightSide = secondJaggedArr[i].Length;
-            allBlocksCounter += (leftSide + rightSide);
-
-            if (firstJaggedArr[i].Length + secondJaggedArr[i].Length != legoRowLenght)
+            legoMatrix = joinArrays(firstJaggedArray, secondJaggedArray, legoMatrix);
+            for (int i = 0; i < legoMatrix.Length; i++)
             {
-                isFit = false;
-            }
-        }
-
-        if (isFit)
-        {
-            string[][] legoFit = new string[n][];
-
-            for (int i = 0; i < n; i++)
-            {
-                legoFit[i] = firstJaggedArr[i].Concat(secondJaggedArr[i]).ToArray();
-            }
-
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine("[{0}]", string.Join(", ", legoFit[i]));
+                Console.WriteLine("[" + string.Join(", ", legoMatrix[i]) + "]");
             }
         }
         else
         {
-            Console.WriteLine("The total number of cells is: {0}", allBlocksCounter);
+            int countOfCells = GetCountOfCells(firstJaggedArray, secondJaggedArray);
+            Console.WriteLine("The total number of cells is: {0}", countOfCells);
+        }
+    }
+
+    static int GetCountOfCells(int[][] firstJaggedArray, int[][] secondJaggedArray)
+    {
+        int counfOfCells = 0;
+        for (int i = 0; i < firstJaggedArray.Length; i++)
+        {
+            int leftSide = firstJaggedArray[i].Length;
+            int rightSide = secondJaggedArray[i].Length;
+
+            counfOfCells += (leftSide + rightSide);
+        }
+
+        return counfOfCells;
+    }
+
+    static int[][] joinArrays(int[][] firstJaggedArray, int[][] secondJaggedArray, int[][] combinedMatrix)
+    {
+        int matrixLength = firstJaggedArray[0].Length + secondJaggedArray[0].Length;
+        for (int i = 0; i < firstJaggedArray.Length; i++)
+        {
+            combinedMatrix[i] = new int[matrixLength];
+            int k = 0;
+            for (int j = 0; j < combinedMatrix[i].Length; j++)
+            {
+                if (j < firstJaggedArray[i].Length)
+                {
+                    combinedMatrix[i][j] = firstJaggedArray[i][j];
+                }
+                else if (j < matrixLength)
+                {
+                    combinedMatrix[i][j] = secondJaggedArray[i][k];
+                    k++;
+                }
+            }
+        }
+
+        return combinedMatrix;
+    }
+
+    static bool IsFitting(int[][] firstJaggedArray, int[][] secondJaggedArray)
+    {
+        bool isFitting = true;
+
+        int legoLength = firstJaggedArray[0].Length + secondJaggedArray[0].Length;
+
+        for (int i = 0; i < firstJaggedArray.Length; i++)
+        {
+            if (firstJaggedArray[i].Length + secondJaggedArray[i].Length != legoLength)
+            {
+                isFitting = false;
+            }
+        }
+
+        return isFitting;
+    }
+
+    static void ReverseJaggedArray(int[][] jaggedArray)
+    {
+        for (int i = 0; i < jaggedArray.Length; i++)
+        {
+            int[] innerArray = jaggedArray[i];
+            Array.Reverse(innerArray);
+        }
+    }
+
+    static void FillJaggedArray(int[][] jaggedArray)
+    {
+        char[] emptySpaces = { ' ' };
+
+        for (int i = 0; i < jaggedArray.Length; i++)
+        {
+            jaggedArray[i] = Console.ReadLine()
+                            .Trim()
+                            .Split(emptySpaces, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(int.Parse)
+                            .ToArray();
         }
     }
 }

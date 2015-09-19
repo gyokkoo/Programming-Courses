@@ -39,7 +39,7 @@ class SelectionSortNumbers
 
     static void SwapTwoElementsInArray(int[] arr, int i, int j)
     {
-        int exchangeValue = arr[i];
+        int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }

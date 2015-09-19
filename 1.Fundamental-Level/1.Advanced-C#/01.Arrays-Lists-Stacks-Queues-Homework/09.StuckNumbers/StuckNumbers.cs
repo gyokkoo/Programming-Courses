@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 /*
 This problem is from the Java Basics Exam (1 June 2014).
 */
@@ -21,16 +19,17 @@ class StuckNumbers
                 {
                     for (int d = 0; d < n; d++)
                     {
-
-                        if (nums[a] != nums[b] && nums[a] != nums[c] && nums[a] != nums[d] && nums[b] != nums[c] && nums[b] != nums[d] && nums[c] != nums[d])
+                        if ((nums[a] + nums[b]) == (nums[c] + nums[d]))
                         {
-                            if (nums[a] + nums[b] == nums[c] + nums[d])
+                            if (nums[a] != nums[b] && nums[a] != nums[c] &&
+                                nums[a] != nums[d] && nums[b] != nums[c] &&
+                                nums[b] != nums[d] && nums[c] != nums[d])
                             {
-                                Console.WriteLine("{0}|{1}=={2}|{3}", nums[a], nums[b], nums[c], nums[d]);
+                                Console.WriteLine("{0}|{1}=={2}|{3}",
+                                    nums[a], nums[b], nums[c], nums[d]);
                                 isFound = true;
                             }
                         }
-
                     }
                 }
             }
