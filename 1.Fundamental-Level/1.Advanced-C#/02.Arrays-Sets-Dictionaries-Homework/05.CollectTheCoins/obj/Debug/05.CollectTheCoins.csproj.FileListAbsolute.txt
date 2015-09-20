@@ -1,0 +1,12 @@
+D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\bin\Debug\05.CollectTheCoins.exe.config
+D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\bin\Debug\05.CollectTheCoins.exe
+D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\bin\Debug\05.CollectTheCoins.pdb
+D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\obj\Debug\05.CollectTheCoins.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\obj\Debug\05.CollectTheCoins.exe
+D:\Softuni\Advanced-C#\3.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\obj\Debug\05.CollectTheCoins.pdb
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\bin\Debug\05.CollectTheCoins.exe.config
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\obj\Debug\05.CollectTheCoins.exe
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\obj\Debug\05.CollectTheCoins.pdb
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\obj\Debug\05.CollectTheCoins.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\bin\Debug\05.CollectTheCoins.exe
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\05.CollectTheCoins\bin\Debug\05.CollectTheCoins.pdb

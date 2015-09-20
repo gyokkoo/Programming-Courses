@@ -1,0 +1,1 @@
+D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\11.StringMatrixRotation\bin\Debug\11.StringMatrixRotation.exe.config
