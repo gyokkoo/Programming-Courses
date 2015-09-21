@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\09.TerroristsWin\bin\Debug\09.TerroristsWin.exe.config
-D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\09.TerroristsWin\bin\Debug\09.TerroristsWin.exe
-D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\09.TerroristsWin\bin\Debug\09.TerroristsWin.pdb
-D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\09.TerroristsWin\obj\Debug\09.TerroristsWin.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\09.TerroristsWin\obj\Debug\09.TerroristsWin.exe
-D:\Softuni\Advanced-C#\2.Multidimensional-Arrays-Sets-Dictionaries\Array-Sets-Dictionaries-Homework\09.TerroristsWin\obj\Debug\09.TerroristsWin.pdb

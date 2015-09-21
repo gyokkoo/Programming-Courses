@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.PlusRemove", "10.PlusRem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.StringMatrixRotation", "11.StringMatrixRotation\11.StringMatrixRotation.csproj", "{5F21F9FE-39EF-4168-BED0-A6E1CB0E6B13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.ToTheStars", "12.ToTheStars\12.ToTheStars.csproj", "{90B2F1D1-C49A-433C-BE7C-D151F70206C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.ActivityTracker", "13.ActivityTracker\13.ActivityTracker.csproj", "{557BF89F-51A3-4647-8F02-72B844B371AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{5F21F9FE-39EF-4168-BED0-A6E1CB0E6B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F21F9FE-39EF-4168-BED0-A6E1CB0E6B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F21F9FE-39EF-4168-BED0-A6E1CB0E6B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B2F1D1-C49A-433C-BE7C-D151F70206C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B2F1D1-C49A-433C-BE7C-D151F70206C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B2F1D1-C49A-433C-BE7C-D151F70206C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B2F1D1-C49A-433C-BE7C-D151F70206C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557BF89F-51A3-4647-8F02-72B844B371AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557BF89F-51A3-4647-8F02-72B844B371AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557BF89F-51A3-4647-8F02-72B844B371AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557BF89F-51A3-4647-8F02-72B844B371AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
