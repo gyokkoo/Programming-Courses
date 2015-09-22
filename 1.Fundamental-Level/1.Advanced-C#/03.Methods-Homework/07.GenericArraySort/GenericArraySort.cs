@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Collections.Generic;
+
 /*
 Write a method which takes an array of any type and sorts it. 
 Use bubble sort or selection sort (your own implementation). 
@@ -22,23 +21,31 @@ class GenericArraySort
             new DateTime(2002, 3, 1), new DateTime(2015, 5, 6), new DateTime(2014, 1, 1)
         };
 
-        Console.WriteLine(SortArray(numbers));
-        Console.WriteLine(SortArray(strings));
-        Console.WriteLine(SortArray(dates));
+        GenericBubbleSort(numbers);
+        Console.WriteLine(string.Join(", ", numbers));
+
+        GenericBubbleSort(strings);
+        Console.WriteLine(string.Join(", ", strings));
+
+        GenericBubbleSort(dates);
+        Console.WriteLine(string.Join(", ", dates));
     }
 
-    static string SortArray<T>(IEnumerable<T> array)
+    static void GenericBubbleSort<T>(T[] genericArray) where T : IComparable
     {
-        List<T> temp = array.ToList();
-        List<T> sorted = new List<T>();
 
-        while (temp.Count > 0)
+        for (int i = 0; i < genericArray.Length; i++)
         {
-            var x = temp.Min();
-            sorted.Add(x);
-            temp.Remove(x);
+            for (int j = 0; j < genericArray.Length - 1; j++)
+            {
+                if (genericArray[j].CompareTo(genericArray[j + 1]) > 0)
+                {
+                    T exchangeValue = genericArray[j];
+                    genericArray[j] = genericArray[j + 1];
+                    genericArray[j + 1] = exchangeValue;
+                }
+            }
         }
 
-        return String.Join(", ", sorted);
     }
 }

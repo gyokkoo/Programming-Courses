@@ -1,11 +1,8 @@
 ﻿using System;
 /*
-Write a method which takes an array of any type and sorts it. 
-Use bubble sort or selection sort (your own implementation). 
-You may re-use your code from a previous homework and modify it. 
-Use a generic method (read in Internet about generic methods in C#). 
-Make sure that what you're trying to sort can be sorted – your method should work with numbers,
-strings, dates, etc., but not necessarily with custom classes like Student.
+Write methods to calculate the minimum, maximum, average, sum and product of a given set of numbers. 
+Overload the methods to work with numbers of type double and decimal.
+Note: Do not use LINQ.
  */
 class NumberCalculations
 {
@@ -48,6 +45,7 @@ class NumberCalculations
         }
         return product;
     }
+
     static decimal GetProdcut(decimal[] decimalNums)
     {
         decimal product = 1;
@@ -67,6 +65,7 @@ class NumberCalculations
         }
         return sum;
     }
+
     static decimal GetSum(decimal[] decimalNums)
     {
         decimal sum = 0;
@@ -82,6 +81,7 @@ class NumberCalculations
         double average = GetSum(doubleNums) / doubleNums.Length;
         return average;
     }
+
     static decimal GetAverage(decimal[] decimalNums)
     {
         decimal average = GetSum(decimalNums) / decimalNums.Length;
@@ -98,6 +98,7 @@ class NumberCalculations
         }
         return max;
     }
+
     static decimal GetMax(decimal[] decimalNums)
     {
         decimal max = decimal.MinValue;
@@ -119,6 +120,7 @@ class NumberCalculations
         }
         return min;
     }
+
     static decimal GetMin(decimal[] decimalNums)
     {
         decimal min = decimal.MaxValue;

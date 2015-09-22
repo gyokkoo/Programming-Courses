@@ -13,7 +13,7 @@ class LastDigitOfNumber
 
         int number = int.Parse(Console.ReadLine());
 
-        Console.WriteLine(GetLastDigitAsWord(number));
+        Console.WriteLine("The last digit as word is: {0}", GetLastDigitAsWord(number));
     }
 
     static string GetLastDigitAsWord(int number)
@@ -21,6 +21,8 @@ class LastDigitOfNumber
         string[] digitAsWords = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
         int index = number % 10;
 
-        return digitAsWords[index];
+        string lastDigitAsWord = digitAsWords[index];
+
+        return lastDigitAsWord;
     }
 }
