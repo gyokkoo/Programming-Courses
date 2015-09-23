@@ -8,7 +8,7 @@ question marks and exclamation marks as word delimiters.
 Print only unique palindromes, sorted lexicographically.
 Example:
 Input	                                    Output
-Hi,exe? ABBA! Hog fully a string. Bob   	a, ABBA, exe
+Hi,exe? ABBA! Hog fully a string. Bob   a, ABBA, exe
 
  */
 class Palindromes
