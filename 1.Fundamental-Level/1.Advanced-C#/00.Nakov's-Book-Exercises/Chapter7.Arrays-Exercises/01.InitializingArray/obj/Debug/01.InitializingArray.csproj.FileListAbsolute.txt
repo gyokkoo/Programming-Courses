@@ -4,3 +4,6 @@ D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\01.Initial
 D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\01.InitializingArray\bin\Debug\01.InitializingArray.pdb
 D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\01.InitializingArray\obj\Debug\01.InitializingArray.exe
 D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\01.InitializingArray\obj\Debug\01.InitializingArray.pdb
+D:\GitHub\Software-University\1.Fundamental-Level\1.Advanced-C#\00.Nakov's-Book-Exercises\Chapter7.Arrays-Exercises\01.InitializingArray\bin\Debug\01.InitializingArray.exe.config
+D:\GitHub\Software-University\1.Fundamental-Level\1.Advanced-C#\00.Nakov's-Book-Exercises\Chapter7.Arrays-Exercises\01.InitializingArray\obj\Debug\01.InitializingArray.exe
+D:\GitHub\Software-University\1.Fundamental-Level\1.Advanced-C#\00.Nakov's-Book-Exercises\Chapter7.Arrays-Exercises\01.InitializingArray\obj\Debug\01.InitializingArray.pdb
