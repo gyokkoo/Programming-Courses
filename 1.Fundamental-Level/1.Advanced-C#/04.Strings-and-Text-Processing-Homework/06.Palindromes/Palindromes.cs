@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 /*
 Write a program that extracts from a given text all palindromes, e.g. ABBA, lamal, exe and 
@@ -8,8 +7,7 @@ question marks and exclamation marks as word delimiters.
 Print only unique palindromes, sorted lexicographically.
 Example:
 Input	                                    Output
-Hi,exe? ABBA! Hog fully a string. Bob   a, ABBA, exe
-
+Hi,exe? ABBA! Hog fully a string. Bob   	a, ABBA, exe
  */
 class Palindromes
 {
@@ -19,6 +17,7 @@ class Palindromes
 
         char[] empyEntries = { ' ', ',', '.', '?', '!' };
         string[] words = Console.ReadLine().Split(empyEntries, StringSplitOptions.RemoveEmptyEntries);
+
         SortedSet<string> palyndromes = new SortedSet<string>();
 
         for (int i = 0; i < words.Length; i++)

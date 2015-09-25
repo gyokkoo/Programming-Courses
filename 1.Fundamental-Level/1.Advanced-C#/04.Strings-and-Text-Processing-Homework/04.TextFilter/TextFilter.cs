@@ -18,6 +18,6 @@ class TextFilter
             text = text.Replace(bannedWords[i], new string('*', bannedWords[i].Length));
         }
 
-        Console.WriteLine(text);
+        Console.WriteLine("Output: \n" + text);
     }
 }

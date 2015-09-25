@@ -17,13 +17,13 @@ class CountSubstringOccurrences
         Console.Title = "Problem 3.	Count Substring Occurrences";
 
         string text = Console.ReadLine().ToLower();
-        string searchStr = Console.ReadLine().ToLower();
+        string searchString = Console.ReadLine().ToLower();
 
         int countOccurrences = 0;
 
-        for (int i = 0; i <= text.Length - searchStr.Length; i++)
+        for (int i = 0; i <= text.Length - searchString.Length; i++)
         {
-            if (searchStr == text.Substring(i, searchStr.Length))
+            if (searchString == text.Substring(i, searchString.Length))
             {
                 countOccurrences++;
             }

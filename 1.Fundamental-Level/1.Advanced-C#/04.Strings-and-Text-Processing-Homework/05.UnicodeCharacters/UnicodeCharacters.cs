@@ -2,9 +2,9 @@
 /*
 Write a program that converts a string to a sequence of C# Unicode character literals. Examples:
 Input       	Output
-Hi!	        \u0048\u0069\u0021
-
+Hi!	            \u0048\u0069\u0021
  */
+
 class UnicodeCharacters
 {
     static void Main()
@@ -12,9 +12,9 @@ class UnicodeCharacters
         Console.Title = "Problem 5.	Unicode Characters";
 
         Console.WriteLine("Enter a string.");
-        string str = Console.ReadLine();
+        string inputString = Console.ReadLine();
 
-        foreach (var ch in str)
+        foreach (char ch in inputString)
         {
             Console.Write("\\u{0:x4}", (int)ch);
         }
