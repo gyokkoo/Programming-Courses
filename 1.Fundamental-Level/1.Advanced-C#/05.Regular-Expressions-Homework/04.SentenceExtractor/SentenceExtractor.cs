@@ -10,7 +10,7 @@ class SentenceExtractor
         string keyword = Console.ReadLine();
         string text = Console.ReadLine();
 
-        Regex regex = new Regex(@"\s*[A-Za-z,;'\""\s’–-]+[.?!]");
+        Regex regex = new Regex(@"\s*[A-Za-z, ;'\""\s’–-]+[.?!]");
         MatchCollection matches = regex.Matches(text);
         regex = new Regex(string.Format((@"\b{0}\b"), keyword));
 
