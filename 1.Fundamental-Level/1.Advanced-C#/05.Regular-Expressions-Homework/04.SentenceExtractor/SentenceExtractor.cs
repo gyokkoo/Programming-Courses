@@ -19,15 +19,9 @@ class SentenceExtractor
         string keyword = Console.ReadLine();
         string text = Console.ReadLine();
 
-<<<<<<< HEAD
         string pattern = string.Format(@"(\b.*?\b{0}\b.*?[.?!])", keyword);
 
         MatchCollection sentences = Regex.Matches(text, pattern);
-=======
-        Regex regex = new Regex(@"\s*[A-Za-z, ;'\""\s’–-]+[.?!]");
-        MatchCollection matches = regex.Matches(text);
-        regex = new Regex(string.Format((@"\b{0}\b"), keyword));
->>>>>>> origin/master
 
         foreach (Match item in sentences)
         {
