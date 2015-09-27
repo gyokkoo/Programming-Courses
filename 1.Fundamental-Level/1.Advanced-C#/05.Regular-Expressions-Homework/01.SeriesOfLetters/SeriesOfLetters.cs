@@ -5,6 +5,7 @@ Write a program that reads a string from the console and replaces all series of 
 Input	                    Output
 aaaaabbbbbcdddeeeedssaa 	abcdedsa
  */
+
 class SeriesOfLetters
 {
     static void Main()
@@ -12,8 +13,17 @@ class SeriesOfLetters
         Console.Title = "Problem 1.	Series of Letters";
 
         string text = Console.ReadLine();
-        Regex regex = new Regex(@"(.)\1+");
 
-        Console.WriteLine(regex.Replace(text, "$1"));
+        for (int i = 0; i < text.Length; i++)
+        {
+            string pattern = string.Format(@"{0}+", text[i]);
+            string replacement = text[i].ToString();
+
+            Regex regex = new Regex(pattern);
+
+            text = regex.Replace(text, replacement);
+        }
+
+        Console.WriteLine(text);
     }
 }
