@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
-
 /*
 Write a program that replaces in a HTML document given as string all the tags <a href=…>…</a> with corresponding tags [URL href=…]…[/URL]. Print the result on the console. 
 The value of the href attribute can be enclosed in single or double quotes. The opening quotes must be the same as the closing closed (e.g. this is invalid: href='softuni.bg").
@@ -17,6 +16,7 @@ Input
   [URL href=http://softuni.bg]SoftUni[/URL]
  </li>
 </ul>
+
  */
 class ReplaceTag
 {
