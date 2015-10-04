@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\6.Streams-and-Files\Streams-and-Files-Homework\01.OddLines\bin\Debug\01.OddLines.exe.config
-D:\Softuni\Advanced-C#\6.Streams-and-Files\Streams-and-Files-Homework\01.OddLines\bin\Debug\01.OddLines.exe
-D:\Softuni\Advanced-C#\6.Streams-and-Files\Streams-and-Files-Homework\01.OddLines\bin\Debug\01.OddLines.pdb
-D:\Softuni\Advanced-C#\6.Streams-and-Files\Streams-and-Files-Homework\01.OddLines\obj\Debug\01.OddLines.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\6.Streams-and-Files\Streams-and-Files-Homework\01.OddLines\obj\Debug\01.OddLines.exe
-D:\Softuni\Advanced-C#\6.Streams-and-Files\Streams-and-Files-Homework\01.OddLines\obj\Debug\01.OddLines.pdb

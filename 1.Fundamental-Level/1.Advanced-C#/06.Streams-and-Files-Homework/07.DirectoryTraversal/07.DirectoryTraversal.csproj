@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9BED1C6D-1F42-4283-AFB6-DDDCB9E97BED}</ProjectGuid>
+    <ProjectGuid>{DDD04C67-BA9C-423C-807D-F71947387A1F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.LineNumbers</RootNamespace>
-    <AssemblyName>02.LineNumbers</AssemblyName>
+    <RootNamespace>_07.DirectoryTraversal</RootNamespace>
+    <AssemblyName>07.DirectoryTraversal</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LineNumbers.cs" />
+    <Compile Include="DirectoryTraversal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
