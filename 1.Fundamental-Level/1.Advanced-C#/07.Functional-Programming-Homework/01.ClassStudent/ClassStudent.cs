@@ -4,6 +4,6 @@ class ClassStudent
 {
     static void Main()
     {
-        //TODO
+        //TODO.
     }
 }
