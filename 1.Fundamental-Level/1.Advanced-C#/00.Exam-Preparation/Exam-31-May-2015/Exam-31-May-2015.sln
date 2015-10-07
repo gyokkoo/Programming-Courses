@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.CommandInterpreter", "1.CommandInterpreter\1.CommandInterpreter.csproj", "{0288303D-1842-484E-958E-97406AC9FCEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.TargetPractice", "2.TargetPractice\2.TargetPractice.csproj", "{D3863B1E-E485-4576-BE0C-8F6176DA8326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.TextTransformer", "3.TextTransformer\3.TextTransformer.csproj", "{21956241-4104-49EA-83B3-912A111A0C02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.OlympicsAreComing", "4.OlympicsAreComing\4.OlympicsAreComing.csproj", "{97AAB1E3-3477-44DA-B631-FE69851C2A75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.OlympicsAreComing-2", "4.OlympicsAreComing-2\4.OlympicsAreComing-2.csproj", "{BA3813F8-2B10-46D7-8ABE-07024AE9A9C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{D3863B1E-E485-4576-BE0C-8F6176DA8326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3863B1E-E485-4576-BE0C-8F6176DA8326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3863B1E-E485-4576-BE0C-8F6176DA8326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21956241-4104-49EA-83B3-912A111A0C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21956241-4104-49EA-83B3-912A111A0C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21956241-4104-49EA-83B3-912A111A0C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21956241-4104-49EA-83B3-912A111A0C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AAB1E3-3477-44DA-B631-FE69851C2A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AAB1E3-3477-44DA-B631-FE69851C2A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AAB1E3-3477-44DA-B631-FE69851C2A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AAB1E3-3477-44DA-B631-FE69851C2A75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3813F8-2B10-46D7-8ABE-07024AE9A9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3813F8-2B10-46D7-8ABE-07024AE9A9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3813F8-2B10-46D7-8ABE-07024AE9A9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3813F8-2B10-46D7-8ABE-07024AE9A9C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

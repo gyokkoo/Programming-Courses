@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\2.TargetPractice\bin\Debug\2.TargetPractice.exe.config
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\2.TargetPractice\bin\Debug\2.TargetPractice.exe
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\2.TargetPractice\bin\Debug\2.TargetPractice.pdb
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\2.TargetPractice\obj\Debug\2.TargetPractice.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\2.TargetPractice\obj\Debug\2.TargetPractice.exe
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\2.TargetPractice\obj\Debug\2.TargetPractice.pdb

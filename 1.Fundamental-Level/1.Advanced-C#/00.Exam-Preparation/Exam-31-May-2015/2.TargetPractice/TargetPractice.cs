@@ -21,14 +21,14 @@ class TargetPractice
 
         FireAShot(matrix, targetRow, targetCol, shotRadius);
 
-        //TODO
+        DropCharacters(matrix);
+
+        PrintMatrix(matrix);
     }
-
-
 
     static void FillMatrix(char[,] matrix, string snake, int numberOfRows, int numberOfColumns)
     {
-        string direction = "right";
+        string direction = "left";
         int snakeChRemainder = 0;
         for (int row = numberOfRows - 1; row >= 0; row--)
         {
@@ -40,7 +40,7 @@ class TargetPractice
                 }
                 snakeChRemainder += numberOfColumns % snake.Length;
                 direction = "right";
-                
+
             }
             else if (direction == "right")
             {
@@ -53,56 +53,61 @@ class TargetPractice
             }
         }
     }
+
     static void FireAShot(char[,] matrix, int targetRow, int targetCol, int shotRadius)
     {
-        //TODO
-    }
-}
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-
-
-
-        for (int row = rows - 1; row >= 0; row--)
+        for (int row = 0; row < matrix.GetLength(0); row++)
         {
-            for (int col = 0; col < columns; col++)
+            for (int col = 0; col < matrix.GetLength(1); col++)
             {
-               if(matrix[row, col] == ' ')
-               {
-                   for (int i = rows - 1; i >= 0; i--)
-                   {
-                       if(matrix[i, col] != ' ')
-                       {
-                           matrix[row, col] = matrix[i, col];
-                           matrix[i, col] = ' ';
-                           break;
-                       }
-                   }
-               }
+                if (isInsideRadius(row, col, targetRow, targetCol, shotRadius))
+                {
+                    matrix[row, col] = ' ';
+                }
             }
         }
+    }
 
+    static bool isInsideRadius(int currentRow, int currentCol, int targetRow, int targetCol, int shotRadius)
+    {
+        int deltaRow = currentRow - targetRow;
+        int deltaCol = currentCol - targetCol;
 
-        for (int i = 0; i < rows; i++)
+        bool isInsideRadius = deltaRow * deltaRow + deltaCol * deltaCol
+                              <= shotRadius * shotRadius;
+
+        return isInsideRadius;
+    }
+
+    static void DropCharacters(char[,] matrix)
+    {
+        for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
         {
-            for (int j = 0; j < columns; j++)
+            for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                Console.Write(matrix[i, j]);
+                if (matrix[row, col] == ' ')
+                {
+                    for (int i = row - 1; i >= 0; i--)
+                    {
+                        if (matrix[i, col] != ' ')
+                        {
+                            matrix[row, col] = matrix[i, col];
+                            matrix[i, col] = ' ';
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    static void PrintMatrix(char[,] matrix)
+    {
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write(matrix[row, col]);
             }
             Console.WriteLine();
         }

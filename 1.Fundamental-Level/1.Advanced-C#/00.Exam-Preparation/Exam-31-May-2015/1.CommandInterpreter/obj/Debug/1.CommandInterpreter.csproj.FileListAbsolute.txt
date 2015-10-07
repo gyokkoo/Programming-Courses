@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\1.CommandInterpreter\bin\Debug\1.CommandInterpreter.exe.config
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\1.CommandInterpreter\bin\Debug\1.CommandInterpreter.exe
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\1.CommandInterpreter\bin\Debug\1.CommandInterpreter.pdb
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\1.CommandInterpreter\obj\Debug\1.CommandInterpreter.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\1.CommandInterpreter\obj\Debug\1.CommandInterpreter.exe
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-31-May-2015\1.CommandInterpreter\obj\Debug\1.CommandInterpreter.pdb
