@@ -1,0 +1,6 @@
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\11.LittleJohn\bin\Debug\11.LittleJohn.exe.config
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\11.LittleJohn\bin\Debug\11.LittleJohn.exe
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\11.LittleJohn\bin\Debug\11.LittleJohn.pdb
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\11.LittleJohn\obj\Debug\11.LittleJohn.csprojResolveAssemblyReference.cache
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\11.LittleJohn\obj\Debug\11.LittleJohn.exe
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\11.LittleJohn\obj\Debug\11.LittleJohn.pdb

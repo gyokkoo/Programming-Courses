@@ -1,0 +1,1 @@
+D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\02.StringMatrixRotation\bin\Debug\02.StringMatrixRotation.exe.config
