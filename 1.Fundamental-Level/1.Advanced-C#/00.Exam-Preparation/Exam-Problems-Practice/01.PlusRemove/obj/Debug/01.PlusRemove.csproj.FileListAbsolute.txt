@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\01.PlusRemove\bin\Debug\01.PlusRemove.exe.config
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\01.PlusRemove\bin\Debug\01.PlusRemove.exe
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\01.PlusRemove\bin\Debug\01.PlusRemove.pdb
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\01.PlusRemove\obj\Debug\01.PlusRemove.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\01.PlusRemove\obj\Debug\01.PlusRemove.exe
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\01.PlusRemove\obj\Debug\01.PlusRemove.pdb

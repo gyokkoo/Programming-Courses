@@ -1,1 +1,0 @@
-D:\Softuni\Advanced-C#\Exam-Preparation\Exam-Problems-Practice\05.SemanticHtml\bin\Debug\05.SemanticHtml.exe.config
