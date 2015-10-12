@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\10.MostFrequentlyElement\bin\Debug\10.MostFrequentlyElement.exe.config
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\10.MostFrequentlyElement\bin\Debug\10.MostFrequentlyElement.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\10.MostFrequentlyElement\bin\Debug\10.MostFrequentlyElement.pdb
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\10.MostFrequentlyElement\obj\Debug\10.MostFrequentlyElement.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\10.MostFrequentlyElement\obj\Debug\10.MostFrequentlyElement.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\10.MostFrequentlyElement\obj\Debug\10.MostFrequentlyElement.pdb

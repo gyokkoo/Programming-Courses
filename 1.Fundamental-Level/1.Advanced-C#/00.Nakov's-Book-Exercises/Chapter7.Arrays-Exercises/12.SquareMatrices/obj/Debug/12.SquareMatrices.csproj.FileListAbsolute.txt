@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\12.SquareMatrices\bin\Debug\12.SquareMatrices.exe.config
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\12.SquareMatrices\bin\Debug\12.SquareMatrices.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\12.SquareMatrices\bin\Debug\12.SquareMatrices.pdb
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\12.SquareMatrices\obj\Debug\12.SquareMatrices.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\12.SquareMatrices\obj\Debug\12.SquareMatrices.pdb
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\12.SquareMatrices\obj\Debug\12.SquareMatrices.csprojResolveAssemblyReference.cache

@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\09.MaxSumSubsequence\bin\Debug\09.MaxSumSubsequence.exe.config
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\09.MaxSumSubsequence\bin\Debug\09.MaxSumSubsequence.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\09.MaxSumSubsequence\bin\Debug\09.MaxSumSubsequence.pdb
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\09.MaxSumSubsequence\obj\Debug\09.MaxSumSubsequence.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\09.MaxSumSubsequence\obj\Debug\09.MaxSumSubsequence.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\09.MaxSumSubsequence\obj\Debug\09.MaxSumSubsequence.pdb

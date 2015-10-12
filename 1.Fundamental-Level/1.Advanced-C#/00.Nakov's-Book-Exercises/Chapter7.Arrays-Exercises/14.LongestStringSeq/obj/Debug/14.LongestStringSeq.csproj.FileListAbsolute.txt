@@ -1,8 +1,0 @@
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.exe.config
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.pdb
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\obj\Debug\14.LongestStringSeq.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\obj\Debug\14.LongestStringSeq.pdb
-D:\GitHub\Software-University\1.Fundamental-Level\1.Advanced-C#\00.Nakov's-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\bin\Debug\14.LongestStringSeq.exe.config
-D:\GitHub\Software-University\1.Fundamental-Level\1.Advanced-C#\00.Nakov's-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\obj\Debug\14.LongestStringSeq.exe
-D:\GitHub\Software-University\1.Fundamental-Level\1.Advanced-C#\00.Nakov's-Book-Exercises\Chapter7.Arrays-Exercises\14.LongestStringSeq\obj\Debug\14.LongestStringSeq.pdb

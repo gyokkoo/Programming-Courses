@@ -1,6 +1,0 @@
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\11.CertainSumArr\bin\Debug\11.CertainSumArr.exe.config
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\11.CertainSumArr\bin\Debug\11.CertainSumArr.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\11.CertainSumArr\bin\Debug\11.CertainSumArr.pdb
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\11.CertainSumArr\obj\Debug\11.CertainSumArr.csprojResolveAssemblyReference.cache
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\11.CertainSumArr\obj\Debug\11.CertainSumArr.exe
-D:\Softuni\Advanced-C#\Nakov-Book-Exercises\Chapter7.Arrays-Exercises\11.CertainSumArr\obj\Debug\11.CertainSumArr.pdb
