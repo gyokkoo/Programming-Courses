@@ -4,17 +4,17 @@ public class _08_GetAverage {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double a = scanner.nextDouble();
-        double b = scanner.nextDouble();
-        double c = scanner.nextDouble();
+        double firstNumber = scanner.nextDouble();
+        double secondNumber = scanner.nextDouble();
+        double thirdNumber = scanner.nextDouble();
 
-        double average = getAverage(a,b,c);
+        double average = getAverage(firstNumber, secondNumber, thirdNumber);
 
         System.out.println(String.format("%.2f", average));
     }
 
-    public static double getAverage(double a, double b, double c) {
-        double average = (a + b + c)/3.0;
+    public static double getAverage(double firstNumber, double secondNumber, double thirdNumber) {
+        double average = (firstNumber + secondNumber + thirdNumber)/3.0;
 
         return average;
     }
