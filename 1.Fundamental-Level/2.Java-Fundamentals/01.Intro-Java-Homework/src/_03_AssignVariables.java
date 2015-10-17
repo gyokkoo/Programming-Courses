@@ -19,5 +19,4 @@ public class _03_AssignVariables {
         System.out.println("long example -> " + longNumber);
         System.out.println("char example -> " + charSymbol);
     }
-
 }

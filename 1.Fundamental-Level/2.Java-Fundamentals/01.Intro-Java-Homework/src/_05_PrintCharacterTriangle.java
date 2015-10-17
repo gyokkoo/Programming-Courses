@@ -5,9 +5,9 @@ public class _05_PrintCharacterTriangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("n = ");
+        System.out.println("Enter a number.");
         int number = scanner.nextInt();
-        //The english alphabet has only 26 letters.
+        //The english alphabet has 26 letters.
 
         printUpperTriangle(number);
         printDownTriangle(number);
@@ -15,10 +15,9 @@ public class _05_PrintCharacterTriangle {
 
     private static void printUpperTriangle(int n) {
         for(int i = 1; i <= n - 1; i++) {
-            char c = 'a';
             for (int j = 0; j < i; j++) {
-                c = (char)('a' + j);
-                System.out.print(c + " ");
+                char currentLetter = (char)('a' + j);
+                System.out.print(currentLetter + " ");
             }
             System.out.println();
         }
@@ -26,13 +25,11 @@ public class _05_PrintCharacterTriangle {
 
     private static void printDownTriangle(int n) {
         for (int i = n; i >= 0; i--) {
-            char c = 'a';
             for (int j = 0; j < i; j++) {
-                c = (char) ('a' + j);
-                System.out.print(c + " ");
+                char currentLetter = (char) ('a' + j);
+                System.out.print(currentLetter + " ");
             }
             System.out.println();
         }
     }
-
 }

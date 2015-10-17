@@ -4,7 +4,5 @@ public class _04_PrintCharacters {
         for (char c = 'a'; c <= 'z'; c++) {
             System.out.print(c + " ");
         }
-        System.out.println();
     }
-
 }

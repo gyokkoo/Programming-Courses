@@ -7,12 +7,11 @@ public class _07_GhettoNumeralSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a number");
+        System.out.println("Enter a number.");
         int number = scanner.nextInt();
-        List<String> ghettoNumbersList = new ArrayList<String>();
+        ArrayList<String> ghettoNumbersList = new ArrayList<String>();
 
-        while(number > 0)
-        {
+        while(number > 0) {
             int lastDigit = number % 10;
             String ghettoNumber = getGhettoNumber(lastDigit);
             ghettoNumbersList.add(ghettoNumber);
@@ -23,8 +22,6 @@ public class _07_GhettoNumeralSystem {
         for (int i = ghettoNumbersList.size() - 1; i >= 0; i--) {
             System.out.print(ghettoNumbersList.get(i));
         }
-        System.out.println();
-
     }
 
     private static String getGhettoNumber(int digit) {
