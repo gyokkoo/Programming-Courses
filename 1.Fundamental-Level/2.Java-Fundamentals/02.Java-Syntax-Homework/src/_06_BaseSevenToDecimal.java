@@ -3,20 +3,22 @@ import java.util.Scanner;
 public class _06_BaseSevenToDecimal {
 
     public static void main(String[] args) {
+        //https://www.youtube.com/watch?v=yxIGZ9wST_4 useful video about converting logic
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Base-7 number.");
-        int n = scanner.nextInt();
-        int sevenBaseNumber = Math.abs(n);
+        System.out.println("Enter a number in base-7.");
 
-        int decimalNum = 0;
-        int pow = 0;
-        while(sevenBaseNumber > 0) {
-            int lastDigit = sevenBaseNumber % 10;
-            decimalNum += lastDigit * (int) Math.pow(7, pow);
-            pow++;
-            sevenBaseNumber /= 10;
+        int number = scanner.nextInt();
+        //Integer.valueOf(number, 7)
+        int numberDigits = Integer.toString(number).length();
+
+        int result = 0;
+        for (int i = 0; i < numberDigits; i++) {
+            int remainder = number % 10;
+            result += remainder * Math.pow(7, i);
+            number /= 10;
         }
 
-        System.out.println(n < 0 ? ("-" + decimalNum): decimalNum);
+        System.out.println("The number in decimal system is: " + result);
+
     }
 }

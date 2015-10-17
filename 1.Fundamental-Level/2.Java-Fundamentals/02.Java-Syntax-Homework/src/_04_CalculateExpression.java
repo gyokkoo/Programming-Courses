@@ -11,7 +11,7 @@ public class _04_CalculateExpression {
 
         double firstFormulae = Math.pow((a*a + b*b) / (a*a - b*b),(a+b+c)/Math.sqrt(c));
         double secondFormulae = Math.pow((a*a + b*b - c*c*c), (a-b));
-        double numbersAverage = (a+b+c) /3;
+        double numbersAverage = (a+b+c) / 3;
         double formulaeAverage = (firstFormulae + secondFormulae) / 2;
 
         System.out.format("F1 result: %.2f; ", firstFormulae);

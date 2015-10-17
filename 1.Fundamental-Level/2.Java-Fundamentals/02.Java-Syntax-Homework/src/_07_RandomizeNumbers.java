@@ -18,10 +18,10 @@ public class _07_RandomizeNumbers {
             numbersList.add(i);
         }
 
-        Random rnd = new Random();
+        Random random = new Random();
         int size = numbersList.size();
         while(size > 0) {
-            int randomIndex = rnd.nextInt(size);
+            int randomIndex = random.nextInt(size);
             System.out.print(numbersList.remove(randomIndex) + " ");
             size--;
         }

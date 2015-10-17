@@ -10,6 +10,6 @@ public class _01_RectangleArea {
 
         long rectangleArea = sideA * sideB;
 
-        System.out.println("The rectangle area is: " + rectangleArea);
+        System.out.println(rectangleArea);
     }
 }
