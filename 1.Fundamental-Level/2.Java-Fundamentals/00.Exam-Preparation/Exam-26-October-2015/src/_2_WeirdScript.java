@@ -24,7 +24,7 @@ public class _2_WeirdScript {
             line = scanner.nextLine();
         }
 
-        String patternStr = keyLetters + "(.*?)" + keyLetters;
+        String patternStr = keyLetters + "(.*?)" +  keyLetters;
         Pattern pattern = Pattern.compile(patternStr);
         Matcher matcher = pattern.matcher(text.toString());
         while(matcher.find()) {
