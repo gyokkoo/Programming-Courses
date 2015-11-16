@@ -1,10 +1,8 @@
-package problem_2_;
-
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SecondProblem {
+public class _2_SoftuniDefenceSystem {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -27,6 +25,7 @@ public class SecondProblem {
 
             line = scanner.nextLine();
         }
+
         if(isFound) {
             System.out.printf("%.3f softuni liters\n",  totalLiters);
         }

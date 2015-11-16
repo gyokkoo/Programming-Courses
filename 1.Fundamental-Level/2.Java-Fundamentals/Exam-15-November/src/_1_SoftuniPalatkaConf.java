@@ -1,8 +1,6 @@
-package problem_1_;
-
 import java.util.Scanner;
 
-public class FirstProblem {
+public class _1_SoftuniPalatkaConf {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -55,6 +53,4 @@ public class FirstProblem {
             }
         }
     }
-
-
 }

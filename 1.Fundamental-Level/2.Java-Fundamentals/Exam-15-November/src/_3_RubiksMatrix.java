@@ -1,8 +1,6 @@
-package problem_3_;
-
 import java.util.Scanner;
 
-public class ThirdProblem {
+public class _3_RubiksMatrix {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -19,6 +17,7 @@ public class ThirdProblem {
                 num++;
             }
         }
+
         int n = Integer.parseInt(scanner.nextLine());
         for (int b = 0; b < n; b++) {
             String[] moveArgs = scanner.nextLine().split(" ");
@@ -27,19 +26,24 @@ public class ThirdProblem {
             int moves = Integer.parseInt(moveArgs[2]);
             switch (direction) {
                 case "left":
-                    moveLeft(columns, matrix[rowOrCol], moves);
+                    moveLeft(columns, matrix[rowOrCol], moves % rows);
                     break;
                 case "right":
-                    moveRight(columns, matrix[rowOrCol], moves);
+                    moveRight(columns, matrix[rowOrCol], moves % rows);
                     break;
                 case "up":
-                    moveUp(rows, columns, matrix, rowOrCol, moves);
+                    moveUp(rows, columns, matrix, rowOrCol, moves % columns);
                     break;
                 case "down":
-                    moveDown(rows, columns, matrix, rowOrCol, moves);
+                    moveDown(rows, columns, matrix, rowOrCol, moves % columns);
                     break;
             }
         }
+
+        rearrange(rows, columns, matrix, firstMatrix);
+    }
+
+    private static void rearrange(int rows, int columns, int[][] matrix, int[][] firstMatrix) {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if(matrix[i][j] == firstMatrix[i][j]) {
@@ -123,8 +127,8 @@ public class ThirdProblem {
             int[] arr = new int[columns];
             int index = 0;
             for (int j = 0; j < columns; j++) {
-                    arr[index] = ints[j];
-                    index++;
+                arr[index] = ints[j];
+                index++;
             }
             shiftLeft(arr);
             index = 0;
