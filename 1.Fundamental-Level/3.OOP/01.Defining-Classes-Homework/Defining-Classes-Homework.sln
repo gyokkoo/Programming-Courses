@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.LaptopShop", "02.LaptopS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PC-Catalog", "03.PC-Catalog\03.PC-Catalog.csproj", "{361E5CA6-4714-4562-A662-84E472FE85BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.SoftUniLearningSystem", "04.SULSMain\04.SoftUniLearningSystem.csproj", "{8080D87A-348C-4C73-AD29-D3DE77CA2A33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{361E5CA6-4714-4562-A662-84E472FE85BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{361E5CA6-4714-4562-A662-84E472FE85BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{361E5CA6-4714-4562-A662-84E472FE85BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8080D87A-348C-4C73-AD29-D3DE77CA2A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8080D87A-348C-4C73-AD29-D3DE77CA2A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8080D87A-348C-4C73-AD29-D3DE77CA2A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8080D87A-348C-4C73-AD29-D3DE77CA2A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

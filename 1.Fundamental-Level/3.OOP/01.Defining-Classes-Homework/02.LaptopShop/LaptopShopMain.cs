@@ -1,9 +1,11 @@
 ﻿using System;
 
-class LaptopShopMain
+public class LaptopShopMain
 {
     public static void Main()
     {
+        Console.Title = "Problem 2.	Laptop Shop";
+
         Laptop firstLaptop = new Laptop(
             "Lenovo Yoga 2 Pro",
             "Lenovo",
@@ -14,6 +16,7 @@ class LaptopShopMain
             "13.3\"(33.78 cm) – 3200 x 1800(QHD +), IPS sensor display",
             new Battery("Li-Ion, 4-cells, 2550 mAh", 4.5),
             2259.00m);
+
         Laptop secondLaptop = new Laptop("Lenovo Yoga 2 Pro", 2259.00m);
 
         //Laptop thirdLaptop = new Laptop("Acer Laptop", -15);

@@ -11,19 +11,21 @@ public class Battery
         this.BatteryLife = batteryLife;
     }
 
-    public string Type {
+    public string Type
+    {
         get
         {
             return this.type;
         }
+
         set
         {
-            if(string.IsNullOrWhiteSpace(value))
+            if (string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException("Type cannot be empty!");
+                throw new ArgumentException("The type cannot be empty!", "type");
             }
 
-            this.type = value;                   
+            this.type = value;
         }
     }
 
@@ -33,11 +35,12 @@ public class Battery
         {
             return this.batteryLife;
         }
+
         set
         {
-            if(value < 0)
+            if (value < 0)
             {
-                throw new ArgumentException("The price cannot be negative!");
+                throw new ArgumentException("The battery life cannot be negative!", "battery life");
             }
 
             this.batteryLife = value;
@@ -47,8 +50,9 @@ public class Battery
     public override string ToString()
     {
         string result = String.Format(
-            "Battery -> {0}\nBattery life -> {1}\n", 
+            "Battery -> {0}\nBattery life -> {1} hours\n",
             this.Type, this.BatteryLife);
+
         return result;
     }
 }

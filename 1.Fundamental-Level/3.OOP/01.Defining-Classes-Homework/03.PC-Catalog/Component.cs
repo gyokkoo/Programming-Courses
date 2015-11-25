@@ -7,17 +7,16 @@ public class Component
     private string details;
     private decimal price;
 
+    public Component(string name, decimal price)
+        : this(name, null, price)
+    {
+    }
+
     public Component(string name, string details, decimal price)
     {
         this.Name = name;
         this.Details = details;
         this.Price = price;
-    }
-
-    public Component(string name, decimal price)
-        : this(name, null, price)
-    {
-       
     }
 
     public string Name
@@ -26,23 +25,25 @@ public class Component
         {
             return this.name;
         }
+
         set
         {
-            if(string.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("The name cannot be null or empty!");
+                throw new ArgumentException("The name cannot be null or empty!", "name");
             }
 
             this.name = value;
         }
     }
-    
+
     public string Details
     {
         get
         {
             return this.details;
         }
+
         set
         {
             this.details = value;
@@ -55,11 +56,12 @@ public class Component
         {
             return this.price;
         }
+
         set
         {
-            if(value < 0)
+            if (value < 0)
             {
-                throw new ArgumentException("Price value cannot be negative!");
+                throw new ArgumentException("Price value cannot be negative!", "price");
             }
 
             this.price = value;

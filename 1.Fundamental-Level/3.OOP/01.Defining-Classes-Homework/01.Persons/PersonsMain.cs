@@ -1,25 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class PersonsMain
 {
     static void Main()
     {
-        Person firstPerson = new Person("Gosho", 25, "gosho.peshev@gmail.com");
-        Person secondPerson = new Person("Pesho", 23);
-        Person thirdPerson = new Person("Ivan", 15, "ivan.ivanov@abv.bg");
-        Person fourthPerson = new Person("Koko", 18);
+        Console.Title = "Problem 1.	Persons";
 
-        Person[] persons = new Person[4];
-        persons[0] = firstPerson;
-        persons[1] = secondPerson;
-        persons[2] = thirdPerson;
-        persons[3] = fourthPerson;
+        List<Person> people = new List<Person>()
+        {
+            new Person("Gosho", 25, "gosho.peshev@gmail.com"),
+            new Person("Pesho", 23),
+            new Person("Ivan", 15, "ivan.ivanov@abv.bg"),
+            new Person("Koko", 18)
+        };
 
-        for (int i = 0; i < persons.Length; i++)
+
+        for (int i = 0; i < people.Count; i++)
         {
             Console.WriteLine("----- [Person {0}] -----", i + 1);
-            Console.WriteLine(persons[i].ToString());
-            Console.WriteLine();
+            Console.WriteLine(people[i].ToString() + "\n");
         }
 
         //Person wrongAge = new Person("Nikolay", -15);

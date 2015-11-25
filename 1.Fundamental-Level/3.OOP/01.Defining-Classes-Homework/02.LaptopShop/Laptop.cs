@@ -7,7 +7,9 @@ public class Laptop
     private decimal price;
 
     public Laptop(
-        string model, string manufacturer, string processor, int ram, string graphicsCard, string hdd, string screen, Battery battery, decimal price)
+        string model, string manufacturer, string processor,
+        int ram, string graphicsCard, string hdd, string screen,
+        Battery battery, decimal price)
     {
         this.Model = model;
         this.Manufacturer = manufacturer;
@@ -17,8 +19,8 @@ public class Laptop
         this.GraphicsCard = graphicsCard;
         this.Hdd = hdd;
         this.Screen = screen;
-        this.Price = price;
         this.Battery = battery;
+        this.Price = price;
     }
 
     public Laptop(string model, decimal price)
@@ -34,9 +36,9 @@ public class Laptop
         }
         set
         {
-            if(string.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("The model cannot be null or empty!");
+                throw new ArgumentException("The model cannot be null or empty!", "model");
             }
 
             this.model = value;
@@ -61,7 +63,7 @@ public class Laptop
         {
             if (value < 0)
             {
-                throw new ArgumentException("The price cannot be negative!");
+                throw new ArgumentException("The price cannot be negative!", "price");
             }
 
             this.price = value;
@@ -72,47 +74,47 @@ public class Laptop
     {
         StringBuilder sb = new StringBuilder();
 
-        sb.AppendLine(new string('-', 40));
+        sb.AppendLine(new string('=', 25));
         sb.AppendLine("Laptop description:");
         sb.AppendLine("Model -> " + this.Model);
 
-        if(this.Manufacturer != null)
+        if (this.Manufacturer != null)
         {
             sb.AppendLine("Manufacturer -> " + this.Manufacturer);
         }
 
-        if(this.Processor != null)
+        if (this.Processor != null)
         {
             sb.AppendLine("Processor -> " + this.Processor);
         }
 
-        if(this.Ram != 0)
+        if (this.Ram != 0)
         {
             sb.AppendLine("RAM -> " + this.Ram + "GB");
         }
 
-        if(this.GraphicsCard != null)
+        if (this.GraphicsCard != null)
         {
             sb.AppendLine("Graphics card -> " + this.GraphicsCard);
         }
 
-        if(this.Hdd != null)
+        if (this.Hdd != null)
         {
             sb.AppendLine("HDD -> " + this.Hdd);
         }
 
-        if(this.Screen != null)
+        if (this.Screen != null)
         {
             sb.AppendLine("Screen -> " + this.Screen);
         }
 
-        if(this.Battery != null)
+        if (this.Battery != null)
         {
             sb.Append(this.Battery.ToString());
         }
 
         sb.AppendLine(String.Format("Price -> {0:F2} lv.", this.Price));
-        sb.Append(new string('-', 40));
+
         return sb.ToString();
     }
 }

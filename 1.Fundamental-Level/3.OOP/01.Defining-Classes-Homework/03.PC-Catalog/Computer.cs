@@ -21,11 +21,12 @@ public class Computer
         {
             return this.name;
         }
+
         set
         {
             if(string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("Name cannot be null or empty!");
+                throw new ArgumentException("Name cannot be null or empty!", "name");
             }
 
             this.name = value;
@@ -50,7 +51,7 @@ public class Computer
     {
         if(components.Length == 0)
         {
-            throw new ArgumentException("Every computer should have parameters!");
+            throw new ArgumentException("Every computer should have parameters!", "components.Length");
         }
 
         this.components.AddRange(components);
@@ -59,13 +60,17 @@ public class Computer
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
+
+        sb.AppendLine(new string('=', 25));
         sb.AppendLine("PC name: " + this.Name);
+
         foreach (Component component in this.Components) 
         {
-            sb.AppendFormat("{0} -> {1}\n", component.Name, component.Price);
+            sb.AppendFormat("{0} -> {1} BGN\n", component.Name, component.Price);
         }
-        sb.AppendLine("Total Price -> " + this.Price() + " BGN");
-        sb.Append(new string('-', 45));
+
+        sb.AppendLine("TOTAL PRICE -> " + this.Price() + " BGN");
+
         return sb.ToString();
     }
 }

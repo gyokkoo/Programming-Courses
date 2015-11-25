@@ -6,6 +6,11 @@ public class Person
     public int age;
     public string email;
 
+    public Person(string name, int age)
+        : this(name, age, null)
+    {
+    }
+
     public Person(string name, int age, string email)
     {
         this.Name = name;
@@ -13,20 +18,18 @@ public class Person
         this.Email = email;
     }
 
-    public Person(string name, int age)
-        : this(name, age, null)
-    {
-
-    }
-
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
+
         set
         {
-            if(value == string.Empty)
+            if (value == string.Empty)
             {
-                throw new ArgumentException("The name cannot be empty string!");
+                throw new ArgumentException("The name cannot be empty string!", "name");
             }
 
             this.name = value;
@@ -38,9 +41,9 @@ public class Person
         get { return this.age; }
         set
         {
-            if(value < 1 || value > 100)
+            if (value < 1 || value > 100)
             {
-                throw new ArgumentException("The age should be in the range [1... 100]!");
+                throw new ArgumentException("The age should be in the range [1... 100]!", "age");
             }
 
             this.age = value;
@@ -52,9 +55,9 @@ public class Person
         get { return this.email; }
         set
         {
-            if(!String.IsNullOrEmpty(value) && !value.Contains("@"))
+            if (!String.IsNullOrEmpty(value) && !value.Contains("@"))
             {
-                throw new ArgumentException("Invalid email!");
+                throw new ArgumentException("Invalid email!", "email");
             }
 
             this.email = value;
