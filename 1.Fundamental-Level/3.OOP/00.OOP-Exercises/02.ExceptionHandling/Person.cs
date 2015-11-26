@@ -15,7 +15,10 @@ public class Person
 
     public string FirstName
     {
-        get { return this.firstName; }
+        get
+        {
+            return this.firstName;
+        }
 
         set
         {
@@ -30,13 +33,16 @@ public class Person
 
     public string LastName
     {
-        get { return this.lastName; }
+        get
+        {
+            return this.lastName;
+        }
 
         set
         {
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("value", "The last name cannot be null or empty.");
+                throw new ArgumentNullException("value", "The last name cannot be null or empty.");
             }
 
             this.lastName = value;
@@ -45,7 +51,10 @@ public class Person
 
     public int Age
     {
-        get { return this.age; }
+        get
+        {
+            return this.age;
+        }
 
         set
         {
@@ -58,4 +67,3 @@ public class Person
         }
     }
 }
-

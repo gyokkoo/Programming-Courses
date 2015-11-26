@@ -1,11 +1,11 @@
 ﻿using System;
 
-class PersonsMain
+public class ExceptionHandlingMain
 {
-    static void Main()
+    public static void Main()
     {
         Person sasho = new Person("Sasho", "Ivanov", 25);
-        
+
         try
         {
             Person noName = new Person(string.Empty, "Goshev", 31);
@@ -18,7 +18,7 @@ class PersonsMain
         {
             Console.WriteLine("Exception thrown: {0}", ex.Message);
         }
-    
+
         //try
         //{
         //    Person negativeAge = new Person("Kaloyan", "Ivanov", -4);
