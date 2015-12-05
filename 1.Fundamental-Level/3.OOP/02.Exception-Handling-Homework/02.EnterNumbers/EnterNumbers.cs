@@ -13,14 +13,18 @@ public class EnterNumbers
 
         int start = 1;
         int end = 100;
+        int previuousNumber = 0;
 
-        Console.WriteLine("Etner 10 numbers in range [{0}...{1}]", start, end);
-        for (int i = 0; i < 10; i++)
+        Console.WriteLine("Enter 10 numbers in range ({0}...{1})", start, end);
+
+        previuousNumber = ReadFirstNumber(start, end);
+
+        for (int i = 1; i < 10; i++)
         {
             try
             {
                 Console.Write("Enter number {0} -> ", i + 1);
-                ReadNumber(start, end);
+                previuousNumber = ReadNumber(previuousNumber, start, end);
             }
             catch (FormatException)
             {
@@ -29,7 +33,7 @@ public class EnterNumbers
             }
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("The number is not in the given range {0} < number < {1}! \nPlease try again.",
+                Console.WriteLine("The number is not in the given range {0} < number < {1} or is smaller than the previuous number! \nPlease try again.",
                     start, end);
                 i--;
             }
@@ -40,17 +44,32 @@ public class EnterNumbers
             }
         }
 
-        Console.WriteLine("Congratulations! You successfully entered 10 numbers in range [{0}...{1}]",
+        Console.WriteLine("Congratulations! You successfully entered 10 numbers in range ({0}...{1})",
             start, end);
     }
 
-    private static void ReadNumber(int start, int end)
+    private static int ReadNumber(int previousNumber, int start, int end)
     {
         int number = int.Parse(Console.ReadLine());
 
-        if (number < start || number > end)
+        if (number <= start || number >= end || number <= previousNumber)
         {
             throw new ArgumentOutOfRangeException();
         }
+
+        return number;
+    }
+
+    private static int ReadFirstNumber(int start, int end)
+    {
+        Console.Write("Enter number 1 -> ");
+        int number = int.Parse(Console.ReadLine());
+        if (number <= 1 || number >= 100)
+        {
+            Console.WriteLine("The number is not in the given range {0} < number < {1} or is smaller than the previuous number! \nPlease try again.",
+    start, end);
+        }
+
+        return number;
     }
 }

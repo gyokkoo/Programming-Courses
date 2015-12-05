@@ -16,23 +16,17 @@ public class SquareRoot
 
         try
         {
-            int number = int.Parse(inputNumber);
-            int squareRoot = Sqrt(number);
+            double number = double.Parse(inputNumber);
+            double squareRoot = Sqrt(number);
             Console.WriteLine("sqrt({0}) = {1}", number, squareRoot);
         }
-        catch (FormatException fe)
+        catch (ArgumentOutOfRangeException)
         {
-            Console.Error.WriteLine(fe.Message);
-            //throw fe;
+            Console.WriteLine("Invalid number");
         }
-        catch (ArgumentOutOfRangeException re)
+        catch (StackOverflowException)
         {
-            Console.Error.WriteLine(re.Message);
-            //throw re;
-        }
-        catch (Exception)
-        {
-            Console.WriteLine("Invalid number!");
+            Console.WriteLine("The number is too big for int32");
         }
         finally
         {
@@ -40,13 +34,13 @@ public class SquareRoot
         }
     }
 
-    private static int Sqrt(int value)
+    private static double Sqrt(double value)
     {
         if (value < 0)
         {
             throw new ArgumentOutOfRangeException();
         }
-        int sqrtNumber = (int)Math.Sqrt(value);
+        double sqrtNumber = Math.Sqrt(value);
 
         return sqrtNumber;
     }
