@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BattleshipsMain" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BattleshipsMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Engine" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQAAAAAAAAAAAAAAAAAACABAAAAAAAAAI=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.AircraftCarrier" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAQAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ships\AircraftCarrier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.Battleship" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ships\Battleship.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.CargoShip" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ships\CargoShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.Destroyer" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAUAAAAABAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ships\Destroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.Ship" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAQAAAAAAQAAAAEAACAAAIAAAACAAA=</HashCode>
+      <FileName>Ships\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.Warship" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ships\Warship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_07.EncapsulationAndPolymorphism_2.Ships.Yacht" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ships\Yacht.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="_07.EncapsulationAndPolymorphism_2.Interfaces.IAttack" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAttack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
