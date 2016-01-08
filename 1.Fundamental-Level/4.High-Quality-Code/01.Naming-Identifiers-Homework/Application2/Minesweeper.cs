@@ -82,6 +82,7 @@
                         {
                             isBombed = true;
                         }
+
                         break;
                     default:
                         Console.WriteLine("\nUnknown command.\n");

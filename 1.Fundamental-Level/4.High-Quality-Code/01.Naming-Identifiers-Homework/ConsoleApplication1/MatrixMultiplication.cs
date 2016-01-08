@@ -17,6 +17,7 @@
                 {
                     Console.Write(productMatrix[row, col] + " ");
                 }
+
                 Console.WriteLine();
             }
         }

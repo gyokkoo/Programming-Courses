@@ -23,7 +23,10 @@
 
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
 
             set
             {
@@ -38,7 +41,10 @@
 
         public int Points
         {
-            get { return this.points; }
+            get
+            {
+                return this.points;
+            }
 
             set
             {
