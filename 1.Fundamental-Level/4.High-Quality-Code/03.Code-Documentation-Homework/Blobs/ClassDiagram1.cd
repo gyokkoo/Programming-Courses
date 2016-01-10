@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Blobs.BlobsMain" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BlobsMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blobs.Engine.Factories.BlobFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Engine\Factories\BlobFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Blobs.Engine.GameData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Engine\GameData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Blobs.Engine.GameEngine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIARQAAAAAAAAAAAAAAAIAAAAAAgAAAAAQAQABAQAAI=</HashCode>
+      <FileName>Engine\GameEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Blobs.IO.ConsoleReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ConsoleReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Blobs.IO.ConsoleWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>IO\ConsoleWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Blobs.Models.AggressiveBlobplode" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQgAAAAAAAAAwAAAAAAAAAAIAAgACAAAAAABAAAAA=</HashCode>
+      <FileName>Models\AggressiveBlobplode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blobs.Models.AggressivePutridFart" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQgAAAAAAAAAwAAAAAAAAAAIAAgACAAAAAABAAAAA=</HashCode>
+      <FileName>Models\AggressivePutridFart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blobs.Models.Blob" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAAEAAAAAAAAAIAAAAAEAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Blob.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Blobs.Models.GameObject" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAgAAAAAAAAAQAAAAEAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Blobs.Models.InflatedBlobplode" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAwAAAAAAAAAAIAAgACAAAAAABAAAAA=</HashCode>
+      <FileName>Models\InflatedBlobplode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blobs.Models.InflatedPutridFart" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAwAAAAAAAAAAIAAgACAAAAAABAAAAA=</HashCode>
+      <FileName>Models\InflatedPutridFart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Blobs.Engine.Interfaces.IBlobFactory" Collapsed="true">
+    <Position X="13" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Engine\Interfaces\IBlobFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.Engine.Interfaces.IGameData" Collapsed="true">
+    <Position X="14.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Engine\Interfaces\IGameData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.Engine.Interfaces.IRunnable" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Engine\Interfaces\IRunnable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.IO.Interfaces.IInputReader" Collapsed="true">
+    <Position X="16.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\Interfaces\IInputReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.IO.Interfaces.IOutputWriter" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>IO\Interfaces\IOutputWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.Models.Interfaces.IAttack" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Interfaces\IAttack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.Models.Interfaces.IBlob" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Interfaces\IBlob.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.Models.Interfaces.IGameObject" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Interfaces\IGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Blobs.Models.Interfaces.IHealth" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Interfaces\IHealth.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Blobs.Models.Enums.AttackType" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enums\AttackType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Blobs.Models.Enums.BehaviourType" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enums\BehaviourType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
