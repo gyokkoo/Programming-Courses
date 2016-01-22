@@ -2,20 +2,17 @@
 {
     using System;
     using System.Diagnostics;
+    using System.Linq;
 
     public class Assertions
     {
         public static void Main()
         {
-            int[] arr = new int[] { 3, -1, 15, 4, 17, 2, 33, 0 };
+            int[] arr = { 3, -1, 15, 4, 17, 2, 33, 0 };
             Console.WriteLine("arr = [{0}]", string.Join(", ", arr));
             SelectionSort(arr);
             Console.WriteLine("sorted = [{0}]", string.Join(", ", arr));
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                Debug.Assert(arr[i] <= arr[i + 1], "The array is not sorted correctly.");
-            }
-            
+
             SelectionSort(new int[0]); // Test sorting empty array
             SelectionSort(new int[1]); // Test sorting single element array
 
@@ -33,6 +30,8 @@
                 int minElementIndex = FindMinElementIndex(arr, index, arr.Length - 1);
                 Swap(ref arr[index], ref arr[minElementIndex]);
             }
+
+            Debug.Assert(arr.SequenceEqual(arr.OrderBy(t => t)), "The array is not sorted correctly!");
         }
 
         public static int BinarySearch<T>(T[] arr, T value) where T : IComparable<T>
@@ -43,9 +42,8 @@
         private static int BinarySearch<T>(T[] arr, T value, int startIndex, int endIndex)
             where T : IComparable<T>
         {
-            Debug.Assert(0 <= startIndex && startIndex < arr.Length, "The start index is invalid.");
-            Debug.Assert(0 <= endIndex && endIndex < arr.Length, "The end index is invalid");
-            Debug.Assert(startIndex <= endIndex, "Start index cannot be bigger than end index.");
+            Debug.Assert(0 <= startIndex && startIndex < arr.Length, "The provided start index is invalid!");
+            Debug.Assert(startIndex <= endIndex && endIndex < arr.Length, "The provided end index is invalid!");
 
             while (startIndex <= endIndex)
             {
@@ -72,12 +70,10 @@
         }
 
         private static int FindMinElementIndex<T>(T[] arr, int startIndex, int endIndex)
-               where T : IComparable<T>
+          where T : IComparable<T>
         {
-            Debug.Assert(arr.Length > 0, "The array length is invalid.");
-            Debug.Assert(0 <= startIndex && startIndex < arr.Length, "The start index is invalid.");
-            Debug.Assert(0 <= endIndex && endIndex < arr.Length, "The end index is invalid");
-            Debug.Assert(startIndex <= endIndex, "Start index cannot be bigger than end index.");
+            Debug.Assert(0 <= startIndex && startIndex < arr.Length, "The provided start index is invalid!");
+            Debug.Assert(startIndex <= endIndex && endIndex < arr.Length, "The provided end index is invalid!");
 
             int minElementIndex = startIndex;
             for (int i = startIndex + 1; i <= endIndex; i++)
@@ -88,6 +84,7 @@
                 }
             }
 
+            Debug.Assert(0 < minElementIndex && minElementIndex < arr.Length, "The min element index is incorrect!");
             return minElementIndex;
         }
 

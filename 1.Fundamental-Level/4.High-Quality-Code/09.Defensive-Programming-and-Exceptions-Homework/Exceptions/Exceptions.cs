@@ -24,9 +24,18 @@
             Console.WriteLine(ExtractEnding("Nakov", 4));
             Console.WriteLine(ExtractEnding("beer", 4));
 
-            // Console.WriteLine(ExtractEnding("Hi", 100)); // will throw an exception
-            Console.WriteLine(CheckPrime(23) ? "23 is prime." : "23 is not prime.");
-            Console.WriteLine(CheckPrime(33) ? "33 is prime." : "33 is not prime.");
+            try
+            {
+                Console.WriteLine(ExtractEnding("Hi", 100));
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine(CheckPrime(23) ? "23 is prime" : "23 is not prime.");
+
+            Console.WriteLine(CheckPrime(33) ? "33 is prime" : "33 is not prime.");
 
             List<Exam> peterExams = new List<Exam>()
                                         {
@@ -36,6 +45,7 @@
                                             new SimpleMathExam(1),
                                             new CSharpExam(0),
                                         };
+
             Student peter = new Student("Peter", "Petrov", peterExams);
             double peterAverageResult = peter.CalcAverageExamResultInPercents();
             Console.WriteLine("Average results = {0:p0}", peterAverageResult);
@@ -43,14 +53,18 @@
 
         public static T[] Subsequence<T>(T[] arr, int startIndex, int count)
         {
-            if (startIndex < 0 || arr.Length <= startIndex)
+            if (startIndex < 0 || arr.Length < startIndex)
             {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "Start index must be in range 0 to arr.Length.");
+                throw new ArgumentOutOfRangeException(
+                    nameof(startIndex),
+                    "The start index cannot be less than zero or bigger than arr.Length");
             }
 
-            if (count < 0 || arr.Length - startIndex < count)
+            if (count < 0 || count > arr.Length - startIndex)
             {
-                throw new ArgumentOutOfRangeException(nameof(count), "The count must be in range 0 to (arr.Length - startIndex).");
+                throw new ArgumentOutOfRangeException(
+                    nameof(count),
+                    "The count should be between 0 and (sarr.Length - startIndex)");
             }
 
             List<T> result = new List<T>();
@@ -66,7 +80,9 @@
         {
             if (count > str.Length)
             {
-                throw new ArgumentOutOfRangeException(nameof(count), "The count must be less than str.Length.");
+                throw new ArgumentOutOfRangeException(
+                    nameof(count),
+                    "The count cannot be bigger than str.Length.");
             }
 
             StringBuilder result = new StringBuilder();
@@ -80,6 +96,11 @@
 
         public static bool CheckPrime(int number)
         {
+            if (number <= 2)
+            {
+                return false;
+            }
+
             for (int divisor = 2; divisor <= Math.Sqrt(number); divisor++)
             {
                 if (number % divisor == 0)

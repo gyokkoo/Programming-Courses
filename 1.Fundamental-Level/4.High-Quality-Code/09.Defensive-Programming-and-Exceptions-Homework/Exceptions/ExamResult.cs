@@ -17,24 +17,6 @@
             this.Comments = comments;
         }
 
-        public int Grade
-        {
-            get
-            {
-                return this.grade;
-            }
-
-            private set
-            {
-                if (value < this.MinGrade || this.MaxGrade < value)
-                {
-                    throw new ArgumentOutOfRangeException(nameof(value), "The grade must in range of min grade and max grade.");
-                }
-
-                this.grade = value;
-            }
-        }
-
         public int MinGrade
         {
             get
@@ -42,11 +24,13 @@
                 return this.minGrade;
             }
 
-            private set
+            set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), "The min grade cannot be negative.");
+                    throw new ArgumentOutOfRangeException(
+                        nameof(value),
+                        "The minimum grade cannot be less than zero.");
                 }
 
                 this.minGrade = value;
@@ -62,12 +46,34 @@
 
             private set
             {
-                if (value <= this.MinGrade)
+                if (value < this.MinGrade)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), "The max grade cannot be less than min grade.");
+                    throw new ArgumentOutOfRangeException(
+                        nameof(value),
+                        "The maximum grade cannot be less than minimum grade.");
                 }
 
                 this.maxGrade = value;
+            }
+        }
+
+        public int Grade
+        {
+            get
+            {
+                return this.grade;
+            }
+
+            private set
+            {
+                if (this.MinGrade > value && value > this.MaxGrade)
+                {
+                    throw new ArgumentOutOfRangeException(
+                        nameof(value),
+                        "The grade cannot be less than minimum grade and bigger than maximum grade.");
+                }
+
+                this.grade = value;
             }
         }
 
@@ -78,11 +84,13 @@
                 return this.comments;
             }
 
-            set
+            private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(nameof(value), "The comments section cannot be null or empty.");
+                    throw new ArgumentNullException(
+                        nameof(value),
+                        "The comments section cannot be empty or white space.");
                 }
 
                 this.comments = value;
