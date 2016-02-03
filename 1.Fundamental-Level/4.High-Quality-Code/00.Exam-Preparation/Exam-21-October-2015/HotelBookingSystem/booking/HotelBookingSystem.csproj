@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45C30131-BED7-4495-86EF-09FF9C4E7193}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelBookingSystem</RootNamespace>
+    <AssemblyName>HotelBookingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\IInputReader.cs" />
+    <Compile Include="Contracts\IOutputWriter.cs" />
+    <Compile Include="Controllers\RoomsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\VenuesController.cs" />
+    <Compile Include="Contracts\IEndpoint.cs" />
+    <Compile Include="Contracts\IEngine.cs" />
+    <Compile Include="Contracts\IHotelBookingSystemData.cs" />
+    <Compile Include="Contracts\IRepository.cs" />
+    <Compile Include="Contracts\IUserRepository.cs" />
+    <Compile Include="Contracts\IView.cs" />
+    <Compile Include="Core\IO\ConsoleOutputWriter.cs" />
+    <Compile Include="Core\IO\ConsoleInputReader.cs" />
+    <Compile Include="Views\Rooms\AddPeriod.cs" />
+    <Compile Include="Views\Venues\All.cs" />
+    <Compile Include="Views\Rooms\Book.cs" />
+    <Compile Include="Views\Venues\Details.cs" />
+    <Compile Include="Views\Users\Login.cs" />
+    <Compile Include="Views\Users\Logout.cs" />
+    <Compile Include="Views\Users\MyProfile.cs" />
+    <Compile Include="Views\Venues\Rooms.cs" />
+    <Compile Include="Views\Rooms\ViewBookings.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Data\HotelBookingSystemData.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Data\UserRepository.cs" />
+    <Compile Include="HotelBookingSystemMain.cs" />
+    <Compile Include="Identity\AuthorizationFailedException.cs" />
+    <Compile Include="Identity\UserExtensions.cs" />
+    <Compile Include="Infrastructure\Controller.cs" />
+    <Compile Include="Infrastructure\Endpoint.cs" />
+    <Compile Include="Infrastructure\View.cs" />
+    <Compile Include="Models\AvailableDate.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Venue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Constants.cs" />
+    <Compile Include="Utilities\HashUtilities.cs" />
+    <Compile Include="Views\Rooms\Add.cs" />
+    <Compile Include="Views\Shared\Error.cs" />
+    <Compile Include="Views\Users\Register.cs" />
+    <Compile Include="Views\Venues\Add.cs" />
+    <Compile Include="Contracts\IDatabaseEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
