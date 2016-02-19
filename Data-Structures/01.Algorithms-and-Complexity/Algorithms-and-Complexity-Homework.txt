@@ -1,0 +1,62 @@
+Problem 1.	Add(T) Complexity
+Calculate the expected running time O(f(n)) of the Add(T) operation in the above code in the worst case.
+
+	Answer: O(n) linear complexity.
+	Array.Copy is an O(n) operation, where n is length.
+	https://msdn.microsoft.com/en-us/library/z50k9bft(v=vs.110).aspx
+	Number of operations proportional to the size of the array.
+----------------------------------------------------------------------------
+Problem 2.	Remove(index) Complexity – Worst Case
+Calculate the expected running time O(f(n)) of the Remove(index) operation in the worst case.
+
+	Answer: O(2*n) ~ O(n) linear complexity in the worst case.
+	It uses Array.Copy two times, which has O(n) complexity.
+	Number of operations proportional to the size of the array.
+----------------------------------------------------------------------------
+Problem 3.	Remove(index) Complexity – Best Case
+Calculate the expected running time O(f(n)) of the Remove(index) operation in the best case.
+
+	Answer: O(2*n) ~ O(n) linear complexity in the best case.
+	It uses Array.Copy two times, which has O(n) complexity.
+	Number of operations proportional to the size of the array.
+----------------------------------------------------------------------------
+Problem 4.	Remove(index) Complexity – Average Case
+Calculate the expected running time O(f(n)) of the Remove(index) operation in the average case.
+
+	Answer: O(2*n) ~ O(n) linear complexity in the average case.
+	It uses Array.Copy two times, which has O(n) complexity.
+	Number of operations proportional to the size of the array..
+----------------------------------------------------------------------------
+Problem 5.	RemoveFirst(T) Complexity
+Calculate the expected running time O(f(n)) of the RemoveFirst(T) operation.
+
+	Answer: O(2*n) ~ O(n) linear complexity in the worst case.
+----------------------------------------------------------------------------
+Problem 6.	RemoveLast(T) Complexity
+Calculate the expected running time O(f(n)) of the RemoveLast(T) operation.
+
+	Answer: O(2*n) ~ O(n) linear complexity in the worst case.
+----------------------------------------------------------------------------
+Problem 7.	Length Complexity
+Calculate the expected running time O(f(n)) of the Length operation.
+
+	Answer: O(1) constant complexity.
+	Constant number of operations, not depending on the size of the array.
+----------------------------------------------------------------------------	
+Problem 8.	This[index] Complexity
+Calculate the expected running time O(f(n)) of the operation this[index].
+
+	Answer: O(1) constant complexity.
+	Constant number of operations, not depending on the size of the array.
+----------------------------------------------------------------------------
+Problem 9.	First Complexity
+Calculate the expected running time O(f(n)) of the First operation.
+
+	Answer: O(1) constant complexity.
+	Constant number of operations, not depending on the size of the array.
+----------------------------------------------------------------------------
+Problem 10.	Last Complexity
+Calculate the expected running time O(f(n)) of the Last operation.
+
+	Answer: O(1) constant complexity.
+	Constant number of operations, not depending on the size of the array.
