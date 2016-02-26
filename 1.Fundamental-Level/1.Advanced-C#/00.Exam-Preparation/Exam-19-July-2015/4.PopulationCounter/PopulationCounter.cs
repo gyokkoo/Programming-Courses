@@ -1,41 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class PopulationCounter
+﻿namespace _4.PopulationCounter
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class PopulationCounter
     {
-        var data = new Dictionary<string, Dictionary<string, long>>();
-        string line = Console.ReadLine();
-
-        while (line != "report")
+        public static void Main()
         {
-            string[] inputArr = line.Split('|');
-            string city = inputArr[0];
-            string country = inputArr[1];
-            int population = int.Parse(inputArr[2]);
+            var data = new Dictionary<string, Dictionary<string, long>>();
 
-            if (!data.ContainsKey(country))
+            string line = Console.ReadLine();
+            while (line != "report")
             {
-                data[country] = new Dictionary<string, long>();
+                string[] lineParams = line.Split('|');
 
+                string city = lineParams[0];
+                string country = lineParams[1];
+                long population = int.Parse(lineParams[2]);
+
+                if (!data.ContainsKey(country))
+                {
+                    data[country] = new Dictionary<string, long>();
+                }
+
+                data[country].Add(city, population);
+
+                line = Console.ReadLine();
             }
 
-            data[country].Add(city, population);
+            var sortedData = data.OrderByDescending(x => x.Value.Values.Sum());
 
-            line = Console.ReadLine();
-        }
-
-        var sorted = data.OrderByDescending(c => c.Value.Sum(s => s.Value));
-
-        foreach (var pair in sorted)
-        {
-            Console.WriteLine("{0} (total population: {1})",
-                pair.Key, pair.Value.Sum(s => s.Value));
-            foreach (var innerPair in pair.Value.OrderByDescending(c => c.Value))
+            foreach (var pair in sortedData)
             {
-                Console.WriteLine("=>{0}: {1}", innerPair.Key, innerPair.Value);
+                Console.WriteLine("{0} (total population: {1})", pair.Key, pair.Value.Values.Sum());
+
+                var sortedInnerData = pair.Value.OrderByDescending(x => x.Value);
+                foreach (var innerPair in sortedInnerData)
+                {
+                    Console.WriteLine("=>{0}: {1}", innerPair.Key, innerPair.Value);
+                }
             }
         }
     }
