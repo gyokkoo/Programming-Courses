@@ -1,115 +1,136 @@
-﻿using System;
-
-class TargetPractice
+﻿namespace _2.TargetPractice
 {
-    static void Main()
+    using System;
+
+    public class TargetPractice
     {
-        string[] matrixDimensions = Console.ReadLine().Split();
-        string snake = Console.ReadLine();
-        string[] shotParameters = Console.ReadLine().Split();
-
-        int rows = int.Parse(matrixDimensions[0]);
-        int columns = int.Parse(matrixDimensions[1]);
-
-        int targetRow = int.Parse(shotParameters[0]);
-        int targetCol = int.Parse(shotParameters[1]);
-        int shotRadius = int.Parse(shotParameters[2]);
-
-        char[,] matrix = new char[rows, columns];
-
-        FillMatrix(matrix, snake, rows, columns);
-
-        FireAShot(matrix, targetRow, targetCol, shotRadius);
-
-        DropCharacters(matrix);
-
-        PrintMatrix(matrix);
-    }
-
-    static void FillMatrix(char[,] matrix, string snake, int numberOfRows, int numberOfColumns)
-    {
-        string direction = "left";
-        int snakeChRemainder = 0;
-        for (int row = numberOfRows - 1; row >= 0; row--)
+        public static void Main()
         {
-            if (direction == "left")
-            {
-                for (int col = numberOfColumns - 1; col >= 0; col--)
-                {
-                    matrix[row, col] = snake[(numberOfColumns - col - 1 + snakeChRemainder) % snake.Length];
-                }
-                snakeChRemainder += numberOfColumns % snake.Length;
-                direction = "right";
+            string[] dimensions = Console.ReadLine().Split();
+            string snakeString = Console.ReadLine();
+            string[] shotParams = Console.ReadLine().Split();
 
-            }
-            else if (direction == "right")
-            {
-                for (int col = 0; col < numberOfColumns; col++)
-                {
-                    matrix[row, col] = snake[(col + snakeChRemainder) % snake.Length];
-                }
-                snakeChRemainder += numberOfColumns % snake.Length;
-                direction = "left";
-            }
+            int rows = int.Parse(dimensions[0]);
+            int columns = int.Parse(dimensions[1]);
+
+            int impactRow = int.Parse(shotParams[0]);
+            int impactColumn = int.Parse(shotParams[1]);
+            int radius = int.Parse(shotParams[2]);
+
+            char[,] matrix = new char[rows, columns];
+
+            FillZigZagMatrix(matrix, snakeString);
+
+            FireAShot(matrix, impactRow, impactColumn, radius);
+
+            DropCharacters(matrix);
+
+            PrintMatrix(matrix);
         }
-    }
 
-    static void FireAShot(char[,] matrix, int targetRow, int targetCol, int shotRadius)
-    {
-        for (int row = 0; row < matrix.GetLength(0); row++)
+        private static void DropCharacters(char[,] matrix)
         {
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                if (isInsideRadius(row, col, targetRow, targetCol, shotRadius))
+                for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
                 {
-                    matrix[row, col] = ' ';
-                }
-            }
-        }
-    }
-
-    static bool isInsideRadius(int currentRow, int currentCol, int targetRow, int targetCol, int shotRadius)
-    {
-        int deltaRow = currentRow - targetRow;
-        int deltaCol = currentCol - targetCol;
-
-        bool isInsideRadius = deltaRow * deltaRow + deltaCol * deltaCol
-                              <= shotRadius * shotRadius;
-
-        return isInsideRadius;
-    }
-
-    static void DropCharacters(char[,] matrix)
-    {
-        for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
-        {
-            for (int col = 0; col < matrix.GetLength(1); col++)
-            {
-                if (matrix[row, col] == ' ')
-                {
-                    for (int i = row - 1; i >= 0; i--)
+                    if (matrix[row, col] == ' ')
                     {
-                        if (matrix[i, col] != ' ')
+                        for (int i = row - 1; i >= 0; i--)
                         {
-                            matrix[row, col] = matrix[i, col];
-                            matrix[i, col] = ' ';
-                            break;
+                            if (matrix[i, col] != ' ')
+                            {
+                                matrix[row, col] = matrix[i, col];
+                                matrix[i, col] = ' ';
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
-    }
 
-    static void PrintMatrix(char[,] matrix)
-    {
-        for (int row = 0; row < matrix.GetLength(0); row++)
+        private static void FireAShot(char[,] matrix, int impactX, int impactY, int radius)
         {
-            for (int col = 0; col < matrix.GetLength(1); col++)
+            matrix[impactX, impactY] = ' ';
+
+            for (int x = 0; x < matrix.GetLength(0); x++)
             {
-                Console.Write(matrix[row, col]);
+                for (int y = 0; y < matrix.GetLength(1); y++)
+                {
+                    try
+                    {
+                        int deltaX = x - impactX;
+                        int deltaY = y - impactY;
+                        if ((deltaX * deltaX) + (deltaY * deltaY) <= radius * radius)
+                        {
+                            matrix[x, y] = ' ';
+                        }
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        // ignored
+                    }
+                }
             }
-            Console.WriteLine();
+        }
+
+        private static void PrintMatrix(char[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    Console.Write(matrix[row, col]);
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        private static void FillZigZagMatrix(char[,] matrix, string snakeString)
+        {
+            int maxRow = matrix.GetLength(0);
+            int maxColumn = matrix.GetLength(1);
+            int row = maxRow - 1;
+            int col = maxColumn - 1;
+            string direction = "left";
+            int snakeIndex = 0;
+            int cellCounter = 0;
+            matrix[row, col] = snakeString[0];
+            while (cellCounter < maxRow * maxColumn)
+            {
+                char currentLetter = snakeString[snakeIndex = snakeIndex == snakeString.Length ? 0 : snakeIndex];
+                matrix[row, col] = currentLetter;
+
+                if (direction == "left")
+                {
+                    if (col - 1 >= 0)
+                    {
+                        col--;
+                    }
+                    else
+                    {
+                        row--;
+                        direction = "right";
+                    }
+                }
+                else if (direction == "right")
+                {
+                    if (col + 1 < maxColumn)
+                    {
+                        col++;
+                    }
+                    else
+                    {
+                        row--;
+                        direction = "left";
+                    }
+                }
+
+                cellCounter++;
+                snakeIndex++;
+            }
         }
     }
 }

@@ -1,62 +1,46 @@
-﻿using System;
-using System.Text;
-using System.Text.RegularExpressions;
-
-class TextTransformer
+﻿namespace _3.TextTransformer
 {
-    static void Main()
+    using System;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
+    public class TextTransformer
     {
-        string line = Console.ReadLine();
-
-        StringBuilder gibberishSb = new StringBuilder();
-
-        while (line != "burp")
+        public static void Main()
         {
-            gibberishSb.Append(line);
-            line = Console.ReadLine();
-        }
+            string line = Console.ReadLine();
 
-        string text = Regex.Replace(gibberishSb.ToString(), "\\s+", " ");
-        Regex pattern = new Regex(@"([$%&'])([^$%&']+)\1");
-        MatchCollection matches = pattern.Matches(text);
-
-        foreach (Match match in matches)
-        {
-            string output = match.Groups[2].Value;
-            int weight = GetWeightFromSymbol(match.Groups[1].Value);
-            StringBuilder currentWord = new StringBuilder();
-
-            for (int i = 0; i < output.Length; i++)
+            StringBuilder textBuilder = new StringBuilder();
+            while (line != "burp")
             {
-                char resultSymbol;
-                if (i % 2 == 0)
-                {
-                    resultSymbol = (char)(output[i] + weight);
-                }
-                else
-                {
-                    resultSymbol = (char)(output[i] - weight);
-                }
-                currentWord.Append(resultSymbol);
+                textBuilder.Append(line);
+                line = Console.ReadLine();
             }
-            Console.Write(currentWord + " ");
-        }
-    }
 
-    static int GetWeightFromSymbol(string specialSymbol)
-    {
-        switch (specialSymbol)
-        {
-            case "$":
-                return 1;
-            case "%":
-                return 2;
-            case "&":
-                return 3;
-            case "'":
-                return 4;
-            default:
-                return 0;
+            string text = Regex.Replace(textBuilder.ToString(), @"\s+", " ");
+
+            MatchCollection matches = Regex.Matches(text, @"([$%&'])([^$%&']+)\1");
+            foreach (Match match in matches)
+            {
+                char specialSymbol = match.Value[0];
+                string realText = match.Groups[2].Value;
+
+                StringBuilder result = new StringBuilder();
+                for (int i = 0; i < realText.Length; i++)
+                {
+                    char letter = realText[i];
+                    if (i % 2 == 0)
+                    {
+                        result.Append((char)(letter + (specialSymbol - 35)));
+                    }
+                    else
+                    {
+                        result.Append((char)(letter - (specialSymbol - 35)));
+                    }
+                }
+
+                Console.Write(result + " ");
+            }
         }
     }
 }

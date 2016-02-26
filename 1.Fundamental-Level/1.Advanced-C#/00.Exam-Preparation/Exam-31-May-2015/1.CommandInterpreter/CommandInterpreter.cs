@@ -1,93 +1,140 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-class CommandInterpreter
+﻿namespace _1.CommandInterpreter
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class CommandInterpreter
     {
-        char[] emptyEntries = new char[] { ' ' };
-        List<string> collections = Console.ReadLine().Split(emptyEntries, StringSplitOptions.RemoveEmptyEntries).ToList();
-
-        string commandLine = Console.ReadLine();
-
-        while (commandLine != "end")
+        public static void Main()
         {
-            string[] commandArr = commandLine.Split(emptyEntries, StringSplitOptions.RemoveEmptyEntries).ToArray();
-            string command = commandArr[0]; 
-            if(command == "reverse")
-            {
-                int start = int.Parse(commandArr[2]);
-                int count = int.Parse(commandArr[4]);
+            List<string> collection =
+                Console.ReadLine()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
 
-                if (start >= collections.Count || count > collections.Count || start < 0 || count < 0 || start + count > collections.Count)
-                {
-                    Console.WriteLine("Invalid input parameters.");
-                }
-                else
-                {
-                    collections.Reverse(start, count);
-                }
-            }
-            else if (command == "sort")
+            string commandLine = Console.ReadLine();
+            while (commandLine != "end")
             {
-                int start = int.Parse(commandArr[2]);
-                int count = int.Parse(commandArr[4]);
+                string[] commandParams = commandLine.Split();
+                string command = commandParams[0];
 
-                if (start >= collections.Count || count > collections.Count || start < 0 || count < 0 || start + count > collections.Count)
+                string commandResult = string.Empty;
+                switch (command)
                 {
-                    Console.WriteLine("Invalid input parameters.");
+                    case "reverse":
+                        {
+                            int start = int.Parse(commandParams[2]);
+                            int count = int.Parse(commandParams[4]);
+                            commandResult = ExecuteReverseCommand(collection, start, count);
+                            break;
+                        }
+
+                    case "sort":
+                        {
+                            int start = int.Parse(commandParams[2]);
+                            int count = int.Parse(commandParams[4]);
+                            commandResult = ExecuteSortCommand(collection, start, count);
+                            break;
+                        }
+
+                    case "rollLeft":
+                        {
+                            int count = int.Parse(commandParams[1]);
+                            commandResult = ExecuteRollLeftCommand(collection, count);
+                            break;
+                        }
+
+                    case "rollRight":
+                        {
+                            int count = int.Parse(commandParams[1]);
+                            commandResult = ExecuteRollRightCommand(collection, count);
+                            break;
+                        }
+
+                    default:
+                        throw new ArgumentException("Invalid command");
                 }
-                else
+
+                if (commandResult == "Invalid input parameters.")
                 {
-                    collections.Sort(start, count, StringComparer.InvariantCulture);
+                    Console.WriteLine(commandResult);
                 }
-            }
-            else if (command == "rollLeft")
-            {
-                int count = int.Parse(commandArr[1]);
-                if (count < 0)
-                {
-                    Console.WriteLine("Invalid input parameters.");
-                }
-                else
-                {
-                    rollLeft(collections, count);
-                }
-            }
-            else if (command == "rollRight")
-            {
-                int count = int.Parse(commandArr[1]);
-                if (count < 0)
-                {
-                    Console.WriteLine("Invalid input parameters.");
-                }
-                else
-                {
-                    rollRight(collections, count);
-                }
+
+                commandLine = Console.ReadLine();
             }
 
-            commandLine = Console.ReadLine();
+            Console.WriteLine("[{0}]", string.Join(", ", collection));
         }
 
-        Console.WriteLine("[" + string.Join(", " , collections) + "]");
-    }
+        private static string ExecuteRollLeftCommand(IList<string> collection, int count)
+        {
+            if (count < 0)
+            {
+                return "Invalid input parameters.";
+            }
 
-    static void rollRight(List<string> list, int count)
-    {
-        int numberOfRolls = count % list.Count;
-        var elementsToMove = list.Skip(list.Count - numberOfRolls)
-                                 .Take(numberOfRolls)
-                                 .ToArray();
-        list.InsertRange(0, elementsToMove);
-        list.RemoveRange(list.Count - numberOfRolls, numberOfRolls);
-    }
+            for (int i = 0; i < count % collection.Count; i++)
+            {
+                string firstElement = collection[0];
+                for (int j = 0; j < collection.Count - 1; j++)
+                {
+                    collection[j] = collection[j + 1];
+                }
 
-    static void rollLeft(List<string> list, int count)
-    {
-        int numberOfRolls = count % list.Count;
-        var elementsToMove = list.Take(numberOfRolls).ToArray();
-        list.AddRange(elementsToMove);
-        list.RemoveRange(0, numberOfRolls);
+                collection[collection.Count - 1] = firstElement;
+            }
+
+            return string.Empty;
+        }
+
+        private static string ExecuteRollRightCommand(IList<string> collection, int count)
+        {
+            if (count < 0)
+            {
+                return "Invalid input parameters.";
+            }
+
+            for (int i = 0; i < count % collection.Count; i++)
+            {
+                string lastElement = collection[collection.Count - 1];
+                for (int j = collection.Count - 1; j >= 1; j--)
+                {
+                    collection[j] = collection[j - 1];
+                }
+
+                collection[0] = lastElement;
+            }
+
+            return string.Empty;
+        }
+
+        private static string ExecuteSortCommand(List<string> collection, int start, int count)
+        {
+            if (start < 0 || collection.Count <= start ||
+                count < 0 || collection.Count < count ||
+                collection.Count < start + count)
+            {
+                return "Invalid input parameters.";
+            }
+
+            collection.Sort(start, count, StringComparer.InvariantCulture);
+
+            return string.Empty;
+        }
+
+        private static string ExecuteReverseCommand(List<string> collection, int start, int count)
+        {
+            if (start < 0 || collection.Count <= start ||
+                count < 0 || collection.Count < count ||
+                collection.Count < start + count)
+            {
+                return "Invalid input parameters.";
+            }
+
+            collection.Reverse(start, count);
+
+            return string.Empty;
+        }
     }
 }

@@ -1,41 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-
-class OlympicsAreComing
+﻿namespace _4.OlympicsAreComing
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
+    public class OlympicsAreComing
     {
-        var data = new Dictionary<string, List<string>>();
-
-        string line = Console.ReadLine();
-
-        while (line != "report")
+        public static void Main()
         {
-            string[] names = line.Split('|');
-            string athlete = names[0];
-            string country = names[1];
+            var data = new Dictionary<string, List<string>>();
 
-            athlete = Regex.Replace(athlete, @"\s{2,}", " ").Trim();
-            country = Regex.Replace(country, @"\s{2,}", " ").Trim();
-
-            if (!data.ContainsKey(country))
+            string line = Console.ReadLine();
+            while (line != "report")
             {
-                data.Add(country, new List<string>());
+                line = Regex.Replace(line, "\\s+", " ");
+                string[] lineParams = line.Split('|');
+
+                string player = lineParams[0].Trim();
+                string country = lineParams[1].Trim();
+
+                if (!data.ContainsKey(country))
+                {
+                    data[country] = new List<string>();
+                }
+
+                data[country].Add(player);
+
+                line = Console.ReadLine();
             }
-            data[country].Add(athlete);
-            line = Console.ReadLine();
-        }
 
-        var orderedData = data.OrderByDescending(x => x.Value.Count);
-
-        foreach (var keyValuePair in orderedData)
-        {
-            Console.WriteLine("{0} ({1} participants): {2} wins",
-                          keyValuePair.Key,
-                          keyValuePair.Value.Distinct().Count(),
-                          keyValuePair.Value.Count);
+            var sortedData = data.OrderByDescending(x => x.Value.Count);
+            foreach (var pair in sortedData)
+            {
+                Console.WriteLine(
+                    "{0} ({1} participants): {2} wins",
+                    pair.Key,
+                    pair.Value.Distinct().Count(),
+                    pair.Value.Count);
+            }
         }
     }
 }
