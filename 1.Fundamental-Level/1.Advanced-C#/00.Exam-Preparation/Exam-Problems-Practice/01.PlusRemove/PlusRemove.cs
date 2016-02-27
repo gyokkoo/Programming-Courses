@@ -1,119 +1,87 @@
-﻿using System;
-using System.Collections.Generic;
-
-class PlusRemove
+﻿namespace _01.PlusRemove
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+
+    public class PlusRemove
     {
-        char[][] firstJaggedArr = new char[101][];
-        char[][] secondJaggedArr = new char[101][];
-
-        string inputLine = Console.ReadLine();
-
-        int rows = 0;
-
-        while (inputLine != "END")
+        public static void Main()
         {
-            FillJaggedArray(firstJaggedArr, rows, inputLine);
+            string textLine = Console.ReadLine();
 
-            FillJaggedArray(secondJaggedArr, rows, inputLine);
-
-            inputLine = Console.ReadLine();
-
-            rows++;
-        }
-
-        RemovePlus(rows, firstJaggedArr, secondJaggedArr);
-
-        LeftShiftSpaces(rows, secondJaggedArr);
-
-        PrintJaggedArray(secondJaggedArr, rows);
-
-    }
-
-    private static void FillJaggedArray(char[][] jaggedArray, int rows, string inputLine)
-    {
-        jaggedArray[rows] = new char[inputLine.Length];
-
-        for (int j = 0; j < inputLine.Length; j++)
-        {
-            jaggedArray[rows][j] = inputLine[j];
-        }
-    }
-
-    static void RemovePlus(int rows, char[][] firstJaggedArr, char[][] secondJaggedArray)
-    {
-        for (int i = 1; i < rows - 1; i++)
-        {
-            for (int j = 1; j < firstJaggedArr[i].Length - 1; j++)
+            List<string> lines = new List<string>();
+            while (textLine != "END")
             {
-                if (isInsideArray(firstJaggedArr, i, j))
+                lines.Add(textLine);
+                textLine = Console.ReadLine();
+            }
+
+            char[][] jaggedMatrix = new char[lines.Count][];
+            char[][] resultMatrix = new char[lines.Count][];
+
+            for (int row = 0; row < jaggedMatrix.Length; row++)
+            {
+                jaggedMatrix[row] = new char[lines[row].Length];
+                resultMatrix[row] = new char[lines[row].Length];
+                for (int col = 0; col < jaggedMatrix[row].Length; col++)
                 {
-                    if (char.ToLower(firstJaggedArr[i][j]) == char.ToLower(firstJaggedArr[i - 1][j]) &&
-                        char.ToLower(firstJaggedArr[i][j]) == char.ToLower(firstJaggedArr[i][j - 1]) &&
-                        char.ToLower(firstJaggedArr[i][j]) == char.ToLower(firstJaggedArr[i][j + 1]) &&
-                        char.ToLower(firstJaggedArr[i][j]) == char.ToLower(firstJaggedArr[i + 1][j]))
+                    jaggedMatrix[row][col] = char.ToLower(lines[row][col]);
+                    resultMatrix[row][col] = lines[row][col];
+                }
+            }
+
+            RemovePlusShapes(jaggedMatrix, resultMatrix);
+
+            PrintArray(resultMatrix);
+        }
+
+        private static void RemovePlusShapes(char[][] jaggedMatrix, char[][] resultMatrix)
+        {
+            for (int row = 1; row < jaggedMatrix.Length - 1; row++)
+            {
+                for (int col = 1; col < jaggedMatrix[row].Length - 1; col++)
+                {
+                    if (CheckPlusShape(jaggedMatrix, row, col))
                     {
-                        secondJaggedArray[i - 1][j] = '\0';
-                        secondJaggedArray[i][j - 1] = '\0';
-                        secondJaggedArray[i][j] = '\0';
-                        secondJaggedArray[i][j + 1] = '\0';
-                        secondJaggedArray[i + 1][j] = '\0';
+                        resultMatrix[row][col] = '\0';
+                        resultMatrix[row - 1][col] = '\0';
+                        resultMatrix[row + 1][col] = '\0';
+                        resultMatrix[row][col - 1] = '\0';
+                        resultMatrix[row][col + 1] = '\0';
                     }
                 }
             }
         }
-    }
 
-    static bool isInsideArray(char[][] jaggedArray, int i, int j)
-    {
-        bool isInsideArray = true;
-        try
+        private static void PrintArray(char[][] arr)
         {
-            int tryToCatchExcetion =   (jaggedArray[i - 1][j] +
-                                        jaggedArray[i][j - 1] + 
-                                        jaggedArray[i][j] + 
-                                        jaggedArray[i][j + 1] + 
-                                        jaggedArray[i + 1][j]);
-        }
-        catch (Exception)
-        {
-            isInsideArray = false;
-        }
-        return isInsideArray;
-    }
-
-    static void LeftShiftSpaces(int rows, char[][] secondJaggedArr)
-    {
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < secondJaggedArr[i].Length; j++)
+            for (int row = 0; row < arr.Length; row++)
             {
-                if (secondJaggedArr[i][j] == '\0')
+                for (int col = 0; col < arr[row].Length; col++)
                 {
-                    for (int k = j; k < secondJaggedArr[i].Length; k++)
+                    if (arr[row][col] != '\0')
                     {
-                        if (secondJaggedArr[i][k] != '\0')
-                        {
-                            secondJaggedArr[i][j] = secondJaggedArr[i][k];
-                            secondJaggedArr[i][k] = '\0';
-                            break;
-                        }
+                        Console.Write(arr[row][col]);
                     }
                 }
+
+                Console.WriteLine();
             }
         }
-    }
 
-    static void PrintJaggedArray(char[][] secondJaggedArr, int rows)
-    {
-        for (int i = 0; i < rows; i++)
+        private static bool CheckPlusShape(char[][] jaggedMatrix, int row, int col)
         {
-            for (int j = 0; j < secondJaggedArr[i].Length; j++)
+            try
             {
-                Console.Write(secondJaggedArr[i][j]);
+                return jaggedMatrix[row][col] == jaggedMatrix[row - 1][col]
+                       && jaggedMatrix[row][col] == jaggedMatrix[row][col - 1]
+                       && jaggedMatrix[row][col] == jaggedMatrix[row][col + 1]
+                       && jaggedMatrix[row][col] == jaggedMatrix[row + 1][col];
             }
-            Console.WriteLine();
+            catch (IndexOutOfRangeException)
+            {
+                return false;
+            }
         }
     }
 }

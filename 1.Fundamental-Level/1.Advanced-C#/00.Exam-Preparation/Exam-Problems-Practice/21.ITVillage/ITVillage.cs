@@ -27,7 +27,6 @@
             string gameResult = GetGameResult(diceNumbers, board, currentRow, currentCol, coins);
 
             Console.WriteLine($"<p>{gameResult}<p>");
-
         }
 
         private static string GetGameResult(int[] diceNumbers, string[,] board, int currentRow, int currentCol, int coins)

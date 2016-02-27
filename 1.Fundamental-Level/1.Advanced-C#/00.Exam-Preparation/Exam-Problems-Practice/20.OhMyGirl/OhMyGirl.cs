@@ -1,7 +1,6 @@
 ﻿namespace _20.OhMyGirl
 {
     using System;
-    using System.IO;
     using System.Text;
     using System.Text.RegularExpressions;
 
@@ -30,9 +29,9 @@
 
         private static string BuildPattern(string key)
         {
-            const string digitRegex = "[0-9]*";
-            const string lowerLetterRegex = "[a-z]*";
-            const string upperLetterRegex = "[A-Z]*";
+            const string DigitRegex = "[0-9]*";
+            const string LowerLetterRegex = "[a-z]*";
+            const string UpperLetterRegex = "[A-Z]*";
 
             StringBuilder pattern = new StringBuilder();
             if (IsSpecial(key[0]))
@@ -48,15 +47,15 @@
             {
                 if (char.IsDigit(key[i]))
                 {
-                    pattern.Append(digitRegex);
+                    pattern.Append(DigitRegex);
                 }
                 else if (char.IsLower(key[i]))
                 {
-                    pattern.Append(lowerLetterRegex);
+                    pattern.Append(LowerLetterRegex);
                 }
                 else if (char.IsUpper(key[i]))
                 {
-                    pattern.Append(upperLetterRegex);
+                    pattern.Append(UpperLetterRegex);
                 }
                 else if (IsSpecial(key[i]))
                 {

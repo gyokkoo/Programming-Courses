@@ -1,94 +1,96 @@
-﻿using System;
-using System.Security;
-using System.Text;
-
-class TextGravity
+﻿namespace _08.TextGravity
 {
-    static void Main()
+    using System;
+    using System.Security;
+    using System.Text;
+
+    public class TextGravity
     {
-        int totalColls = int.Parse(Console.ReadLine());
-        string text = Console.ReadLine();
-
-        int rows = text.Length/totalColls;
-        if (text.Length%totalColls != 0)
+        public static void Main()
         {
-            rows++;
-        }
+            int columns = int.Parse(Console.ReadLine());
+            string text = Console.ReadLine();
 
-        char[,] matrix = new char[rows, totalColls];
+            int rows = text.Length / columns;
+            if (text.Length % columns != 0)
+            {
+                rows++;
+            }
 
-        FillMatrix(matrix, text);
+            char[,] matrix = new char[rows, columns];
 
-        for (int col = 0; col < matrix.GetLength(1); col++)
-        {
-            RunGravity(matrix, col);
-        }
+            FillMatrix(matrix, text);
 
-        StringBuilder output = new StringBuilder();
-
-        string result = GetOutputString(output, matrix);
-
-        Console.WriteLine(result);
-
-    }
-
-    private static string GetOutputString(StringBuilder output, char[,] matrix)
-    {
-        output.Append("<table>");
-        for (int row = 0; row < matrix.GetLength(0); row++)
-        {
-            output.Append("<tr>");
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                output.AppendFormat("<td>{0}</td>",
-                    SecurityElement.Escape(matrix[row, col].ToString()));
+                RunGravity(matrix, col);
             }
-            output.Append("</tr>");
+
+            string result = GetOutputString(matrix);
+            Console.WriteLine(result);
         }
-        output.Append("</table>");
-        return output.ToString();
-    }
 
-    private static void FillMatrix(char[,] matrix, string text)
-    {
-        int currentCharIndex = 0;
-        for (int row = 0; row < matrix.GetLength(0); row++)
+        private static string GetOutputString(char[,] matrix)
         {
-            for (int col = 0; col < matrix.GetLength(1); col++)
+            var output = new StringBuilder();
+            output.Append("<table>");
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                if (currentCharIndex < text.Length)
+                output.Append("<tr>");
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    matrix[row, col] = text[currentCharIndex];
-                    currentCharIndex++;
+                    output.AppendFormat("<td>{0}</td>", SecurityElement.Escape(matrix[row, col].ToString()));
                 }
-                else
+
+                output.Append("</tr>");
+            }
+
+            output.Append("</table>");
+
+            return output.ToString();
+        }
+
+        private static void FillMatrix(char[,] matrix, string text)
+        {
+            int currentCharIndex = 0;
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    matrix[row, col] = ' ';
+                    if (currentCharIndex < text.Length)
+                    {
+                        matrix[row, col] = text[currentCharIndex];
+                        currentCharIndex++;
+                    }
+                    else
+                    {
+                        matrix[row, col] = ' ';
+                    }
                 }
             }
         }
-    }
 
-    private static void RunGravity(char[,] matrix, int col)
-    {
-        while (true)
+        private static void RunGravity(char[,] matrix, int col)
         {
-            bool hasFallen = false;
-            for (int row = 1; row < matrix.GetLength(0); row++)
+            while (true)
             {
-                char topChar = matrix[row - 1, col];
-                char currentChar = matrix[row, col];
-                if (currentChar == ' ' && topChar != ' ')
+                bool hasFallen = false;
+                for (int row = 1; row < matrix.GetLength(0); row++)
                 {
-                    matrix[row, col] = topChar;
-                    matrix[row - 1, col] = ' ';
-                    hasFallen = true;
+                    char topChar = matrix[row - 1, col];
+                    char currentChar = matrix[row, col];
+                    if (currentChar == ' ' && topChar != ' ')
+                    {
+                        matrix[row, col] = topChar;
+                        matrix[row - 1, col] = ' ';
+                        hasFallen = true;
+                    }
                 }
-            }
 
-            if (!hasFallen)
-            {
-                break;
+                if (!hasFallen)
+                {
+                    break;
+                }
             }
         }
     }

@@ -1,59 +1,62 @@
-﻿using System;
-using System.Security;
-using System.Text;
-using System.Text.RegularExpressions;
-
-class UppercaseWords
+﻿namespace _09.UppercaseWords
 {
-    static void Main()
-    {
-        string line = Console.ReadLine();
-        Regex regex = new Regex(@"(?<![a-zA-Z])[A-Z]+(?![a-zA-Z])");
-        while (line != "END")
-        {
-            MatchCollection matches = regex.Matches(line);
+    using System;
+    using System.Security;
+    using System.Text;
+    using System.Text.RegularExpressions;
 
-            int offset = 0;
-            foreach (Match match in matches)
+    public class UppercaseWords
+    {
+        public static void Main()
+        {
+            string line = Console.ReadLine();
+            Regex regex = new Regex(@"(?<![a-zA-Z])[A-Z]+(?![a-zA-Z])");
+            while (line != "END")
             {
-                string word = match.Value;
-                string reversed = Reverse(word);
-                if (reversed == word)
+                MatchCollection matches = regex.Matches(line);
+
+                int offset = 0;
+                foreach (Match match in matches)
                 {
-                    reversed = DoubleEachLetter(reversed);
+                    string word = match.Value;
+                    string reversed = Reverse(word);
+                    if (reversed == word)
+                    {
+                        reversed = DoubleEachLetter(reversed);
+                    }
+
+                    int index = match.Index;
+                    line = line.Remove(index + offset, word.Length);
+                    line = line.Insert(index + offset, reversed);
+                    offset += reversed.Length - word.Length;
                 }
 
-                int index = match.Index;
-                line = line.Remove(index + offset, word.Length);
-                line = line.Insert(index + offset, reversed);
-                offset += reversed.Length - word.Length;
+                Console.WriteLine(SecurityElement.Escape(line));
+                line = Console.ReadLine();
             }
-            Console.WriteLine(SecurityElement.Escape(line));
-            line = Console.ReadLine();
         }
 
-
-    }
-
-    private static string DoubleEachLetter(string reversed)
-    {
-        StringBuilder doubled = new StringBuilder();
-        for (int i = 0; i < reversed.Length; i++)
+        private static string DoubleEachLetter(string reversed)
         {
-            doubled.Append(new string(reversed[i], 2));
-        }
-        return doubled.ToString();
-    }
+            StringBuilder result = new StringBuilder();
+            foreach (char letter in reversed)
+            {
+                result.Append(new string(letter, 2));
+            }
 
-    private static string Reverse(string value)
-    {
-        StringBuilder reversed = new StringBuilder();
-        for (int i = value.Length - 1; i >= 0; i--)
+            return result.ToString();
+        }
+
+        private static string Reverse(string value)
         {
-            reversed.Append(value[i]);
-        }
+            StringBuilder result = new StringBuilder();
+            for (int i = value.Length - 1; i >= 0; i--)
+            {
+                result.Append(value[i]);
+            }
 
-        return reversed.ToString();
+            return result.ToString();
+        }
     }
 }
 

@@ -1,45 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-
-class QueryMess
+﻿namespace _04.QueryMess
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+
+    public class QueryMess
     {
-        string line = Console.ReadLine();
-
-        while (line != "END")
+        public static void Main()
         {
-            var dict = new Dictionary<string, List<string>>();
+            string line = Console.ReadLine();
 
-            line = Regex.Replace(line, @"\+", " ");
-            line = Regex.Replace(line, @"%20", " ");
-            line = Regex.Replace(line, @"\s+", " ");
-
-            Regex regex = new Regex(@"([^&?\r\n]*)=([^&?\r\n]*)");
-            MatchCollection matches = regex.Matches(line);
-
-            foreach (Match match in matches)
+            while (line != "END")
             {
-                string key = match.Groups[1].ToString().Trim();
-                string value = match.Groups[2].ToString().Trim();
+                line = Regex.Replace(line, @"\+", " ");
+                line = Regex.Replace(line, @"%20", " ");
+                line = Regex.Replace(line, @"\s+", " ");
 
-                if (!dict.ContainsKey(key))
+                var dictionary = new Dictionary<string, List<string>>();
+
+                Regex regex = new Regex(@"([^=&?\r\n]*)\s*=\s*([^=&?\r\n]*)");
+                MatchCollection matches = regex.Matches(line);
+
+                foreach (Match match in matches)
                 {
-                    dict.Add(key, new List<string>());
+                    string key = match.Groups[1].ToString().Trim();
+                    string value = match.Groups[2].ToString().Trim();
+
+                    if (!dictionary.ContainsKey(key))
+                    {
+                        dictionary[key] = new List<string>();
+                    }
+
+                    dictionary[key].Add(value);
                 }
-                dict[key].Add(value);
 
+                foreach (var pair in dictionary)
+                {
+                    Console.Write("{0}=[{1}]", pair.Key, string.Join(", ", pair.Value));
+                }
+
+                Console.WriteLine();
+                line = Console.ReadLine();
             }
-
-            foreach (var pair in dict)
-            {
-                Console.Write("{0}=[{1}]", pair.Key, string.Join(", ", pair.Value));
-            }
-            Console.WriteLine();
-
-            line = Console.ReadLine();
         }
     }
 }

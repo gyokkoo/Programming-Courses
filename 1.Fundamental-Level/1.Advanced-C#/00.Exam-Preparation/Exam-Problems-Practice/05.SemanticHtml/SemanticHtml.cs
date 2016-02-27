@@ -1,49 +1,53 @@
-﻿using System;
-using System.Linq;
-using System.Text.RegularExpressions;
-
-class SemanticHtml
+﻿namespace _05.SemanticHtml
 {
-    static void Main()
+    using System;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
+    public class SemanticHtml
     {
-        string line = Console.ReadLine();
-
-        string[] semanticTags = { "main", "header", "nav", "article", "section", "aside", "footer" };
-        string openTagPattern = @"<div.*?\b((id|class)\s*=\s*""(.*?)"").*?>";
-        Regex users = new Regex(openTagPattern);
-        string closeTagPattern = @"<\/div>\s.*?(\w+)\s*-->";
-        Regex closers = new Regex(closeTagPattern);
-
-        while (line != "END")
+        public static void Main()
         {
-            MatchCollection openMatches = users.Matches(line);
-            foreach (Match match in openMatches)
+            string line = Console.ReadLine();
+
+            string[] semanticTags = { "main", "header", "nav", "article", "section", "aside", "footer" };
+
+            while (line != "END")
             {
-                string attrName = match.Groups[1].Value;
-                string attrValue = match.Groups[3].Value;
+                Regex openTag = new Regex(@"<(div).*((id|class)\s*=\s*""(.*?)"").*>");
+                Regex closeTag = new Regex(@"<\/(div)>.*(<!--\s*(\w+)\s*-->)");
 
-                if (semanticTags.Contains(attrValue))
+                if (openTag.IsMatch(line))
                 {
-                    string replaceTag = Regex.Replace(match.ToString(), "div", word => attrValue);
-                    replaceTag = Regex.Replace(replaceTag, attrName, "");
-                    replaceTag = Regex.Replace(replaceTag, "\\s*>", ">");
-                    replaceTag = Regex.Replace(replaceTag, "\\s{2,}", " ");
-                    line = Regex.Replace(line, match.ToString(), replaceTag);
-                }
-            }
+                    Match match = openTag.Match(line);
+                    string nonSemantic = match.Value;
+                    string semantic = match.Value;
+                    string tag = match.Groups[4].Value;
 
-            MatchCollection closeMatches = closers.Matches(line);
-            foreach (Match match in closeMatches)
-            {
-                string commentValue = match.Groups[1].Value;
-                if (semanticTags.Contains(commentValue))
+                    if (semanticTags.Contains(tag))
+                    {
+                        semantic = semantic.Replace(match.Groups[1].Value, tag);
+                        semantic = semantic.Replace(match.Groups[2].Value, string.Empty);
+                        semantic = Regex.Replace(semantic, "\\s*>", ">");
+                        semantic = Regex.Replace(semantic, "\\s+", " ");
+                        line = line.Replace(nonSemantic, semantic);
+                    }
+                }
+                else if (closeTag.IsMatch(line))
                 {
-                    line = Regex.Replace(line, match.ToString(), string.Format("</" + commentValue + ">"));
-                }
-            }
+                    Match match = closeTag.Match(line);
+                    string nonSemantic = match.Value;
+                    string semantic = match.Value;
 
-            Console.WriteLine(line);
-            line = Console.ReadLine();
+                    semantic = semantic.Replace(match.Groups[1].Value, match.Groups[3].Value);
+                    semantic = semantic.Replace(match.Groups[2].Value, string.Empty);
+                    semantic = Regex.Replace(semantic, "\\s+", " ").Trim();
+                    line = line.Replace(nonSemantic, semantic);
+                }
+
+                Console.WriteLine(line);
+                line = Console.ReadLine();
+            }
         }
     }
 }

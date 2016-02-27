@@ -1,33 +1,32 @@
-﻿using System;
-using System.Text;
-using System.Text.RegularExpressions;
-
-class ExtractHyperlinks
+﻿namespace _03.ExtractHyperlinks
 {
-    static void Main()
+    using System;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
+    public class ExtractHyperlinks
     {
-        string line = Console.ReadLine();
-
-        StringBuilder textBuilder = new StringBuilder();
-
-        while (line != "END")
+        public static void Main()
         {
-            textBuilder.Append(line);
-            line = Console.ReadLine();
-        }
+            string line = Console.ReadLine();
 
-        string pattern = @"<a\s+(?:[^>]+\s+)?href\s*=\s*(?:'([^']*)'|""([^""]*)""|([^\s>]+))[^>]*>";
-        Regex regex = new Regex(pattern);
-
-        MatchCollection matches = regex.Matches(textBuilder.ToString());
-
-        foreach (Match match in matches)
-        {
-            for (int i = 1; i <= 3; i++)
+            StringBuilder htmlText = new StringBuilder();
+            while (line != "END")
             {
-                if (match.Groups[i].Length > 0)
+                htmlText.AppendLine(line);
+                line = Console.ReadLine();
+            }
+
+            Regex regex = new Regex(@"<a[^<>]*href\s*=\s*[""](.*?)[""]|<a[^<>]*href\s*=\s*['](.*?)[']|<a[^<>]*href\s*=\s*([^<>\s]*)");
+            MatchCollection matches = regex.Matches(htmlText.ToString());
+            foreach (Match match in matches)
+            {
+                for (int i = 1; i <= 3; i++)
                 {
-                    Console.WriteLine(match.Groups[i]);
+                    if (match.Groups[i].Length > 0)
+                    {
+                        Console.WriteLine(match.Groups[i]);
+                    }
                 }
             }
         }
