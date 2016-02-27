@@ -1,7 +1,7 @@
-﻿namespace BePositive
+﻿namespace _3.BePositive
 {
     using System;
-    using System.Collections.Generic;
+    using System.Linq;
 
     public class BePositiveMain
     {
@@ -11,19 +11,14 @@
 
             for (int i = 0; i < countSequences; i++)
             {
-                char[] whitespaces = { ' ' };
-                string[] input = Console.ReadLine().Split(whitespaces, StringSplitOptions.RemoveEmptyEntries);
-                var numbers = new List<int>();
-
-                for (int j = 0; j < input.Length; j++)
-                {
-                    int num = int.Parse(input[j]);
-                    numbers.Add(num);
-                }
+                string[] input = Console.ReadLine()
+                    .Trim()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var numbers = input.ToList().Select(int.Parse).ToList();
+                numbers.Add(0);
 
                 bool found = false;
-
-                for (int j = 0; j < numbers.Count; j++)
+                for (int j = 0; j < numbers.Count - 1; j++)
                 {
                     int currentNum = numbers[j];
 
@@ -35,19 +30,11 @@
                         }
 
                         Console.Write(currentNum);
-
                         found = true;
                     }
                     else
                     {
-                        if (j < numbers.Count - 1)
-                        {
-                            currentNum += numbers[j + 1];
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        currentNum += numbers[j + 1];
 
                         if (currentNum >= 0)
                         {
@@ -57,27 +44,20 @@
                             }
 
                             Console.Write(currentNum);
-                            j++;
+
                             found = true;
                         }
-                        else
-                        {
-                            j++;
-                        }
+
+                        j++;
                     }
                 }
 
-
                 if (!found)
                 {
-                    Console.WriteLine("(empty)");
-                }
-                else
-                {
-                    Console.WriteLine();
+                    Console.Write("(empty)");
                 }
 
-                numbers.Clear();
+                Console.WriteLine();
             }
         }
     }

@@ -1,8 +1,8 @@
-﻿namespace Debugging_Substring
+﻿namespace _5.Substring
 {
     using System;
 
-    public class Substring_broken
+    public class SubstringBroken
     {
         public static void Main()
         {

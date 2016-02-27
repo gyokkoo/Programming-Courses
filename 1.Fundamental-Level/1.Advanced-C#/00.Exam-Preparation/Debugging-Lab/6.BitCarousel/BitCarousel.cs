@@ -1,10 +1,10 @@
-﻿namespace Debugging_BitCarousel
+﻿namespace _6.BitCarousel
 {
     using System;
 
-    class BitCarousel_broken
+    public class BitCarouselBroken
     {
-        static void Main()
+        public static void Main()
         {
             int number = int.Parse(Console.ReadLine());
             int rotations = int.Parse(Console.ReadLine());

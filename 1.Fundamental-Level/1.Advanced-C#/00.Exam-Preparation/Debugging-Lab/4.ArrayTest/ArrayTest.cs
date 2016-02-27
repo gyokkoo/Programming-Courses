@@ -1,4 +1,4 @@
-﻿namespace Arrays
+﻿namespace _4.ArrayTest
 {
     using System;
     using System.Linq;
@@ -16,8 +16,8 @@
 
             while (true)
             {
-                string[] line = Console.ReadLine().Split(' ');
-                string command = line[0];
+                string[] lineArgs = Console.ReadLine().Split(' ');
+                string command = lineArgs[0];
 
                 if (command == "stop")
                 {
@@ -30,8 +30,8 @@
                     command.Equals("subtract") ||
                     command.Equals("multiply"))
                 {
-                    args[0] = long.Parse(line[1]);
-                    args[1] = long.Parse(line[2]);
+                    args[0] = long.Parse(lineArgs[1]);
+                    args[1] = long.Parse(lineArgs[2]);
 
                     PerformAction(array, command, args);
                 }
@@ -52,7 +52,7 @@
             }
         }
 
-        static void PerformAction(long[] array, string action, long[] args)
+        private static void PerformAction(long[] array, string action, long[] args)
         {
             long pos = args[0] - 1;
             long value = args[1];
@@ -68,7 +68,6 @@
                 case "subtract":
                     array[pos] -= value;
                     break;
-
             }
         }
 
@@ -79,6 +78,7 @@
             {
                 array[i] = array[i - 1];
             }
+
             array[0] = lastElement;
         }
 
@@ -89,14 +89,15 @@
             {
                 array[i] = array[i + 1];
             }
+
             array[array.Length - 1] = firstElement;
         }
 
         private static void PrintArray(long[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            foreach (long number in array)
             {
-                Console.Write(array[i] + " ");
+                Console.Write(number + " ");
             }
         }
     }

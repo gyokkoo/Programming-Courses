@@ -1,51 +1,51 @@
-﻿using System;
-
-class InstructionSet_broken
+﻿namespace _2.InstructionSet
 {
-    static void Main()
+    using System;
+
+    public class InstructionSet
     {
-
-        string opCode = Console.ReadLine();
-
-        while (opCode != "END")
+        public static void Main()
         {
-            string[] codeArgs = opCode.Split(' ');
+            string opCode = Console.ReadLine();
 
-            long result = 0;
-            switch (codeArgs[0])
+            while (opCode != "END")
             {
-                case "INC":
-                    {
-                        long operandOne = long.Parse(codeArgs[1]);
-                        result = operandOne + 1;
-                        break;
-                    }
-                case "DEC":
-                    {
-                        long operandOne = long.Parse(codeArgs[1]);
-                        result = operandOne - 1;
-                        break;
-                    }
-                case "ADD":
-                    {
-                        long operandOne = long.Parse(codeArgs[1]);
-                        long operandTwo = long.Parse(codeArgs[2]);
-                        result = operandOne + operandTwo;
-                        break;
-                    }
-                case "MLA":
-                    {
-                        long operandOne = long.Parse(codeArgs[1]);
-                        long operandTwo = long.Parse(codeArgs[2]);
-                        result = operandOne * operandTwo;
-                        break;
-                    }
+                string[] codeArgs = opCode.Split(' ');
 
+                long result = 0;
+                switch (codeArgs[0])
+                {
+                    case "INC":
+                        {
+                            long operandOne = long.Parse(codeArgs[1]);
+                            result = operandOne + 1;
+                            break;
+                        }
+                    case "DEC":
+                        {
+                            long operandOne = long.Parse(codeArgs[1]);
+                            result = operandOne - 1;
+                            break;
+                        }
+                    case "ADD":
+                        {
+                            long operandOne = long.Parse(codeArgs[1]);
+                            long operandTwo = long.Parse(codeArgs[2]);
+                            result = operandOne + operandTwo;
+                            break;
+                        }
+                    case "MLA":
+                        {
+                            long operandOne = long.Parse(codeArgs[1]);
+                            long operandTwo = long.Parse(codeArgs[2]);
+                            result = operandOne * operandTwo;
+                            break;
+                        }
+                }
+
+                Console.WriteLine(result);
+                opCode = Console.ReadLine();
             }
-
-            Console.WriteLine(result);
-
-            opCode = Console.ReadLine();
         }
     }
 }
