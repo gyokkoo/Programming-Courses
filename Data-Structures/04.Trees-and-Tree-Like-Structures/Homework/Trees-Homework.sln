@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PlayWithTrees", "01.PlayWithTrees\01.PlayWithTrees.csproj", "{94DC02D6-1153-4406-83AE-C0A947B550F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TraverseAndSaveDirectory", "02.TraverseAndSaveDirectory\02.TraverseAndSaveDirectory.csproj", "{DF8CFC63-9A1E-4E58-BEA9-54D4B69AAD8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CalculateArithmeticExpression", "03.CalculateArithmeticExpression\03.CalculateArithmeticExpression.csproj", "{AA73B555-C839-42EA-8290-9077D5596C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94DC02D6-1153-4406-83AE-C0A947B550F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DC02D6-1153-4406-83AE-C0A947B550F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DC02D6-1153-4406-83AE-C0A947B550F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DC02D6-1153-4406-83AE-C0A947B550F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8CFC63-9A1E-4E58-BEA9-54D4B69AAD8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8CFC63-9A1E-4E58-BEA9-54D4B69AAD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8CFC63-9A1E-4E58-BEA9-54D4B69AAD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8CFC63-9A1E-4E58-BEA9-54D4B69AAD8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA73B555-C839-42EA-8290-9077D5596C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA73B555-C839-42EA-8290-9077D5596C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA73B555-C839-42EA-8290-9077D5596C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA73B555-C839-42EA-8290-9077D5596C30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
