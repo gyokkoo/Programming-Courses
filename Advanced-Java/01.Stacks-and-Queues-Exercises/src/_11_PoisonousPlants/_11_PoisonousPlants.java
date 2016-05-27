@@ -6,36 +6,45 @@ public class _11_PoisonousPlants {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        long countOfPlants = scanner.nextLong();
-
-        LinkedList<Long> plants = new LinkedList<>();
+        int countOfPlants = Integer.parseInt(scanner.nextLine());
+        int[] plants = new int[countOfPlants];
+        String[] line = scanner.nextLine().split(" ");
         for (int i = 0; i < countOfPlants; i++) {
-            long amountOfPesticides = scanner.nextInt();
-            plants.add(amountOfPesticides);
+            plants[i] = Integer.parseInt(line[i]);
         }
 
-        long days = 0;
-        while (true) {
-            Stack<Long> removedPlants = new Stack<>();
-            for (int i = 0; i < plants.size() - 1; i++) {
-                long currentPlant = plants.get(i);
-                long nextPlant = plants.get(i + 1);
+        int[] daySpan = new int[countOfPlants];
+        daySpan[0] = -1;
+        int min = plants[0];
+        int maxSpan = 0;
 
-                if (nextPlant > currentPlant) {
-                    removedPlants.push(nextPlant);
+        for (int i = 1; i < plants.length; i++) {
+            if (plants[i] <= min) {
+                min = plants[i];
+                daySpan[i] = -1;
+                continue;
+            }
+
+            daySpan[i] = 1;
+
+            for (int j = i - 1; j >= 0; j--) {
+                if (plants[i] > plants[j]) {
+                    if (maxSpan < daySpan[i]) {
+                        maxSpan = daySpan[i];
+                    }
+                    break;
+                } else {
+                    if (daySpan[j] >= daySpan[i]) {
+                        daySpan[i] = daySpan[j] + 1;
+                        if (maxSpan < daySpan[i]) {
+                            maxSpan = daySpan[i];
+                            break;
+                        }
+                    }
                 }
             }
-
-            if (removedPlants.size() == 0) {
-                System.out.println(days);
-                return;
-            }
-
-            while (removedPlants.size() > 0) {
-                plants.remove(removedPlants.pop());
-            }
-
-            days++;
         }
+
+        System.out.println(maxSpan);
     }
 }
