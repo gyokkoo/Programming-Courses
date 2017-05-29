@@ -1,0 +1,64 @@
+{
+  url httpsapi.github.comrepostestnakovtest-nakov-repoissues1,
+  repository_url httpsapi.github.comrepostestnakovtest-nakov-repo,
+  labels_url httpsapi.github.comrepostestnakovtest-nakov-repoissues1labels{name},
+  comments_url httpsapi.github.comrepostestnakovtest-nakov-repoissues1comments,
+  events_url httpsapi.github.comrepostestnakovtest-nakov-repoissues1events,
+  html_url httpsgithub.comtestnakovtest-nakov-repoissues1,
+  id 188822935,
+  number 1,
+  title yesbe,
+  user {
+    login testnakov,
+    id 23406465,
+    avatar_url httpsavatars2.githubusercontent.comu23406465v=3,
+    gravatar_id ,
+    url httpsapi.github.comuserstestnakov,
+    html_url httpsgithub.comtestnakov,
+    followers_url httpsapi.github.comuserstestnakovfollowers,
+    following_url httpsapi.github.comuserstestnakovfollowing{other_user},
+    gists_url httpsapi.github.comuserstestnakovgists{gist_id},
+    starred_url httpsapi.github.comuserstestnakovstarred{owner}{repo},
+    subscriptions_url httpsapi.github.comuserstestnakovsubscriptions,
+    organizations_url httpsapi.github.comuserstestnakovorgs,
+    repos_url httpsapi.github.comuserstestnakovrepos,
+    events_url httpsapi.github.comuserstestnakovevents{privacy},
+    received_events_url httpsapi.github.comuserstestnakovreceived_events,
+    type User,
+    site_admin false
+  },
+  labels [
+    {
+      id 479839740,
+      url httpsapi.github.comrepostestnakovtest-nakov-repolabelsquestion,
+      name question,
+      color cc317c,
+      default true
+    },
+    {
+      id 479891966,
+      url httpsapi.github.comrepostestnakovtest-nakov-repolabelssofia,
+      name sofia,
+      color fbca04,
+      default false
+    },
+    {
+      id 479892079,
+      url httpsapi.github.comrepostestnakovtest-nakov-repolabelsvarna,
+      name varna,
+      color 1d76db,
+      default false
+    }
+  ],
+  state open,
+  locked false,
+  assignee null,
+  assignees [],
+  milestone null,
+  comments 0,
+  created_at 2016-11-11T183907Z,
+  updated_at 2016-11-21T095315Z,
+  closed_at null,
+  body Is this my first issue,
+  closed_by null
+}

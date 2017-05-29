@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "5923349f741430f02aae786e",
+    "body": "Post 1",
+    "title": "The first post",
+    "_acl": {
+      "creator": "kid_SJIHT9gZ-"
+    },
+    "_kmd": {
+      "lmt": "2017-05-22T18:57:35.125Z",
+      "ect": "2017-05-22T18:57:35.125Z"
+    }
+  }
+]
