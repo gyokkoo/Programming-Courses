@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countries and Towns</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="countries-and-towns.js"></script>
+    <style>
+        td, th {
+            background: #DDD;
+            padding: 5px 10px;
+        }
+
+        input[type='text'] {
+            width: 80px;
+        }
+
+        #editCountry {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h2>Countries & Towns</h2>
+<table id="countriesTable">
+    <tr>
+        <th><input type="text" id="newCountryText">
+        </th>
+        <th>
+            <button id="addCountryBtn">Add</button>
+        </th>
+    </tr>
+</table>
+<br>
+<div id="editCountry">
+    <div style="display: none" id="currentCountryId"></div>
+    <label>New name:</label>
+    <input type="text" id="editCountryInput">
+    <button id="editCountryBtn">Edit</button>
+</div>
+<script>attachEvents()</script>
+</body>
+</html>

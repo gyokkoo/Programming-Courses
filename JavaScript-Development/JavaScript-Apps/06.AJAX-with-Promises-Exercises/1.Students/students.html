@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        #results {
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #results tr {
+            background-color: #AAAAAA;
+            padding: 5vh;
+            font-size: 1.5vw;
+        }
+
+        #results tr:nth-child(odd) {
+            background-color: #808080;
+        }
+
+        #results tr:first-child {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        #results tr th {
+            padding: 1vw;
+        }
+
+        #results tr td {
+            padding: 1vw;
+            transition: font-size 0.2s;
+        }
+
+        #results tr:not(:first-child):hover {
+            background-color: #F0F8FF;
+            color: #000000;
+            font-size: 2.25vw;
+        }
+
+        input {
+            display: block;
+        }
+
+        fieldset {
+            display: inline-table;
+        }
+
+        #btnAdd {
+            padding: 0 5px 0 5px;
+            width: 90%;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+<body>
+<table id="results">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Faculty Number</th>
+        <th>Grade</th>
+    </tr>
+</table>
+<fieldset>
+    <legend>Add Student</legend>
+    <label>Student ID:</label>
+    <input id="studentID" type="number">
+    <label>First name:</label>
+    <input id="firstName" type="text">
+    <label>Last name:</label>
+    <input id="lastName" type="text">
+    <label>Faculty number:</label>
+    <input id="facultyNumber" type="text">
+    <label>Grade:</label>
+    <input id="grade" type="number">
+    <button id="btnAdd">Add</button>
+</fieldset>
+<script src="students.js"></script>
+<script>attachEvents()</script>
+</body>
+</html>
