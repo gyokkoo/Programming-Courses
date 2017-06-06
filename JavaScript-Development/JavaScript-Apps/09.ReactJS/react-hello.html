@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Hello</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+    let element = <h1>Hello, <b>React</b>!</h1>;
+    console.dir(element);
+
+    let age = 18;
+    let ageElement = <p>Age: {age}</p>;
+    ReactDOM.render(ageElement, document.getElementById("app"));
+</script>
+</body>
+</html>

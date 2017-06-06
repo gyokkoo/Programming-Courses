@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX component</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+    function ErrorBox(props) {
+        let css = {
+            color: 'red',
+            fontWeight: 'bold',
+            border: '1px solid red',
+            padding: '8px',
+            textAlign: 'center',
+            margin: "20px"
+        };
+        return <div style={css}>Error: {props.msg}</div>
+    }
+
+    ReactDOM.render(<ErrorBox msg="Invalid Login!"/>, document.getElementById("app"));
+</script>
+</body>
+</html>

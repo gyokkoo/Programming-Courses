@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX component</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+    <style>
+        .counter {
+            background: #ddd;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+    let Counter = React.createClass({
+        getInitialState: function () {
+            return {
+                count: Number(this.props.start),
+                styles: {color: "red"}
+            }
+        },
+        incrementCount: function () {
+            this.setState({
+                count: this.state.count + 1,
+                styles: {color: "green"}
+            });
+        },
+        decrementCount: function () {
+            this.setState({
+                count: this.state.count - 1,
+                styles: {color: "blue"}
+            });
+        },
+        render: function () {
+            return <span className="counter">
+                Count:&nbsp;
+                <b style={this.state.styles}>
+                    {this.state.count}
+                </b>
+                <button type="button" onClick={this.incrementCount}>+</button>
+                <button type="button" onClick={this.decrementCount}>-</button>
+            </span>
+        }
+    });
+
+    ReactDOM.render(
+            <div>
+                <Counter start="10"/>
+                <Counter start="-5"/>
+                <Counter start="25"/>
+            </div>,
+        document.getElementById("app")
+    );
+</script>
+</body>
+</html>
