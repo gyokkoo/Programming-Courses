@@ -1,0 +1,8 @@
+{
+  "name": "shop-stop",
+  "version": "0.0.1",
+  "description": "stop shop lab",
+  "main": "index.js",
+  "author": "Gyokan Nezhdetov",
+  "license": "MIT"
+}
