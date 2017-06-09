@@ -1,0 +1,8 @@
+{
+  "name": "node-js-exercises",
+  "version": "0.0.1",
+  "description": "node exercises",
+  "main": "index.js",
+  "author": "Gyoko",
+  "license": "MIT"
+}
