@@ -4,5 +4,10 @@
   "description": "stop shop lab",
   "main": "index.js",
   "author": "Gyokan Nezhdetov",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "3.9.1",
+    "gulp-clean-css": "3.4.1",
+    "gulp-rename": "1.2.2"
+  }
 }
