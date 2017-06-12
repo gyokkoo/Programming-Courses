@@ -1,0 +1,12 @@
+{
+  "name": "utilities-exercises",
+  "version": "1.0.0",
+  "description": "node.js exercises",
+  "main": "index.js",
+  "engines": {
+	"node": "6.5.0",
+	"npm": "3.10.3"
+  },
+  "author": "Gyokan Nezhdetov",
+  "license": "MIT"
+}
