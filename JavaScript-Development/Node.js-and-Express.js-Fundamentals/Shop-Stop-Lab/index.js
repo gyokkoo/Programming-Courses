@@ -1,6 +1,10 @@
 const http = require('http')
 const handlers = require('./handlers')
+const config = require('./config/config')
+const database = require('./config/database.config')
 
+let environment = process.env.NODE_ENV || 'development'
+database(config[environment])
 const port = 3500
 
 http.createServer((req, res) => {
