@@ -1,15 +1,17 @@
 # Software-University
 Assignments and Exams | Software University
 
-# 1. Fundamental Level
-[1. Advanced C#](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/1.Advanced-C%23)
+# JavaScript Development
 
-[2. Java Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/2.Java-Fundamentals)
+[JavaScript Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Fundamentals)
 
-[3. Object-Oriented Programming](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/3.OOP)
+[JavaScript Advanced](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Advanced)
 
-[4. High-Quality Code](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/4.High-Quality-Code)
+[JavaScript Apps](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Apps)
 
+[Node.js and Express.js Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals)
+
+[Shop Project Back-end](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals/Shop-Stop-Lab)
 
 # Java Development
 
@@ -21,13 +23,17 @@ Assignments and Exams | Software University
 
 [Java BashSoft Project](https://github.com/Nezhdetov/Software-University/tree/master/Java-Development/Java-OOP-Advanced/BashSoft)
 
-# JavaScript Development
+# Data Structure and Algorithms
 
-[JavaScript Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Fundamentals)
+[Data Structures](https://github.com/Nezhdetov/Software-University/tree/master/Data-Structures)
 
-[JavaScript Advanced](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Advanced)
+[Algorithms](https://github.com/Nezhdetov/Software-University/tree/master/Algorithms)
 
-[JavaScript Apps](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Apps)
+# 1. Fundamental Level
+[1. Advanced C#](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/1.Advanced-C%23)
 
-[Node.js and Express.js Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals)
+[2. Java Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/2.Java-Fundamentals)
 
+[3. Object-Oriented Programming](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/3.OOP)
+
+[4. High-Quality Code](https://github.com/Nezhdetov/Software-University/tree/master/1.Fundamental-Level/4.High-Quality-Code)
