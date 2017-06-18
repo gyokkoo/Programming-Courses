@@ -1,0 +1,10 @@
+extends ../layout.pug
+
+block content
+  h2  Home Page
+
+  each recipe in recipes
+    div
+      h2= recipe.name
+      p= recipe.description
+      img(src=recipe.image)

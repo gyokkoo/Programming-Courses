@@ -1,0 +1,14 @@
+{
+  "name": "express-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.3",
+    "multer": "1.3.0"
+  }
+}
