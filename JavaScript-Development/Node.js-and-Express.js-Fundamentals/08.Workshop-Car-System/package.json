@@ -1,0 +1,22 @@
+{
+  "name": "blog-system",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "6.5.0",
+    "nom": "3.10.3"
+  },
+  "author": "Gyokan Nezhdetov",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "cookie-parser": "1.4.3",
+    "express": "^4.15.3",
+    "express-handlebars": "3.0.0",
+    "express-session": "1.15.3",
+    "mongoose": "^4.10.6",
+    "passport": "0.3.2",
+    "passport-local": "1.0.0"
+  }
+}
