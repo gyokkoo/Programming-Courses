@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Blog</title>
+  <link href="/css/site.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/article/list"></a></li>
+      {{#if isAdmin}}
+      <li><a href="/article/add">Add</a></li>
+      {{/if}}
+      {{#if currentUser}}
+      <li class="rightAlign">
+        <form id="logout-form" action="/users/logout/" method="POST"></form>
+        <a href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+      </li>
+      <li class="rightAlign" id="currentUser">
+        <a href="/users/profile">{{currentUser.username}}</a>
+      </li>
+      {{else}}
+      <li class="rightAlign"><a href="/users/register">Register</a></li>
+      <li class="rightAlign"><a href="/users/login">Login</a></li>
+      {{/if}}
+    </ul>
+    
+    {{#if globalError}}
+    <h3>
+      {{globalError}}
+    </h3>
+    {{/if}} 
+    
+    {{{body}}}
+  </div>
+</body>
+
+</html>

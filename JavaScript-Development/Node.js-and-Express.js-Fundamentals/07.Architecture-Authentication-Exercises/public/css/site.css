@@ -1,0 +1,38 @@
+body {
+    background-color: #ccc;
+}
+
+.container {
+  padding-left: 20%;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 25px;
+}
+
+.menu li {
+  display: inline-block
+}
+
+.menu li:after {
+  content: "\00a0";
+}
+
+a:link {
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 25px;
+}
+
+a:visited {
+  color: blue;
+}
+
+.rightAlign {
+  float: right;
+}
+
+.form-group {
+  padding: 1px;
+}
