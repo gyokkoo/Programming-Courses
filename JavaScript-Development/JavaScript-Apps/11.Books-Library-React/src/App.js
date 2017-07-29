@@ -8,6 +8,8 @@ import Footer from './components/Footer'
 import HomeView from './views/HomeView'
 import LoginView from './views/LoginView'
 import RegisterView from './views/RegisterView'
+import BooksView from './views/BooksView'
+import CreateBookView from './views/CreateBookView'
 
 import $ from 'jquery'
 import KinveyRequester from './KinveyRequester'
@@ -56,8 +58,7 @@ export default class App extends Component {
     })
 
     // Attach a global AJAX error handler
-    $(document).ajaxError(
-      this.handleAjaxError.bind(this))
+    $(document).ajaxError(this.handleAjaxError.bind(this))
 
     // Load state
     this.setState({
@@ -105,34 +106,84 @@ export default class App extends Component {
   }
 
   showLoginView () {
-    this.showView(<LoginView onsubmit={this.login} />)
-
-    // TODO: Login in Kinvey with AJAX
-  }
-
-  login (username, password) {
-    KinveyRequester.loginUser(username, password).then(loginSuccess).bind(this)
-
-    function loginSuccess () {
-      this.showInfo('Login successul')
-    }
+    this.showView(<LoginView onsubmit={this.login.bind(this)} />)
   }
 
   showRegisterView () {
-    this.showView(<RegisterView />)
+    this.showView(<RegisterView onsubmit={this.register.bind(this)} />)
   }
 
   showBooksView () {
+    KinveyRequester.loadBooks().then(loadBooksSuccess.bind(this))
 
+    function loadBooksSuccess (books) {
+      this.showView(<BooksView books={books} onedit={this.loadBookForEdit.bind(this)} ondelete={this.loadBookForDelete.bind(this)} />)
+      this.showInfo('Books loaded')
+    }
   }
 
   showCreateBookView () {
+    this.showView(<CreateBookView onsubmit={this.createBook.bind(this)} />)
+  }
+
+  createBook (title, author, description) {
+    KinveyRequester.createBook(title, author, description).then(createBookSuccess.bind(this))
+
+    function createBookSuccess (userInfo) {
+      this.saveAuthInSession(userInfo)
+      this.showBooksView()
+      this.showInfo('Book created')
+    }
+  }
+
+  showEditBookView () {
+    this.showView(<EditBookView onsubmit={this.editBook.bind(this)} />)
+  }
+
+  editBook (title, author, description) {
 
   }
 
+  login (username, password) {
+    KinveyRequester.loginUser(username, password).then(loginSuccess.bind(this))
+
+    function loginSuccess (userInfo) {
+      this.saveAuthInSession(userInfo)
+      this.showBooksView()
+      this.showInfo('You have successfully logged in')
+    }
+  }
+
+  register (username, password) {
+    KinveyRequester.loginUser(username, password).then(registerSuccess.bind(this))
+
+    function registerSuccess (userInfo) {
+      this.saveAuthInSession(userInfo)
+      this.showBooksView()
+      this.showInfo('You have successfully registered')
+    }
+  }
+
+  saveAuthInSession (userInfo) {
+    window.sessionStorage.setItem('authToken', userInfo._kmd.authtoken)
+    window.sessionStorage.setItem('userId', userInfo._id)
+    window.sessionStorage.setItem('username', userInfo.username)
+
+    // This will update the entire app UI (e.g. the navigation bar)
+    this.setState({
+      username: userInfo.username,
+      userId: userInfo._id
+    })
+  }
+
   logout () {
-    this.setState(
-      {username: null}
-    )
+    window.sessionStorage.clear()
+
+    this.setState({
+      username: null,
+      userId: null
+    })
+
+    this.showHomeView()
   }
 }

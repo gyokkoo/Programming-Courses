@@ -24,7 +24,6 @@ export default class LoginView extends Component {
 
   submitForm (event) {
     event.preventDefault()
-    this.props.onsubmit(
-      this.usernameField.value, this.passwordField.value)
+    this.props.onsubmit(this.usernameField.value, this.passwordField.value)
   }
 }
