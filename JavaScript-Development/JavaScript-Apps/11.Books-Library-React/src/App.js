@@ -10,6 +10,8 @@ import LoginView from './views/LoginView'
 import RegisterView from './views/RegisterView'
 import BooksView from './views/BooksView'
 import CreateBookView from './views/CreateBookView'
+import EditBookView from './views/EditBookView'
+import DeleteBookView from './views/DeleteBookView'
 
 import $ from 'jquery'
 import KinveyRequester from './KinveyRequester'
@@ -114,11 +116,49 @@ export default class App extends Component {
   }
 
   showBooksView () {
-    KinveyRequester.loadBooks().then(loadBooksSuccess.bind(this))
+    KinveyRequester.findAllBooks().then(loadBooksSuccess.bind(this))
 
     function loadBooksSuccess (books) {
-      this.showView(<BooksView books={books} onedit={this.loadBookForEdit.bind(this)} ondelete={this.loadBookForDelete.bind(this)} />)
+      this.showView(<BooksView
+        books={books}
+        userId={this.state.userId}
+        editBookClicked={this.prepareBookForEdit.bind(this)}
+        deleteBookClicked={this.confirmBookDelete.bind(this)} />)
       this.showInfo('Books loaded')
+    }
+  }
+
+  prepareBookForEdit (bookId) {
+    KinveyRequester.findBookById(bookId)
+      .then(loadBookForEditSuccess.bind(this))
+
+    function loadBookForEditSuccess (bookInfo) {
+      this.showView(
+        <EditBookView
+          onsubmit={this.editBook.bind(this)}
+          bookId={bookInfo._id}
+          title={bookInfo.title}
+          author={bookInfo.author}
+          description={bookInfo.description}
+        />
+      )
+    }
+  }
+
+  confirmBookDelete (bookId) {
+    KinveyRequester.findBookById(bookId)
+      .then(loadBookForDeleteSuccess.bind(this))
+
+    function loadBookForDeleteSuccess (bookInfo) {
+      this.showView(
+        <DeleteBookView
+          onsubmit={this.deleteBook.bind(this)}
+          bookId={bookInfo._id}
+          title={bookInfo.title}
+          author={bookInfo.author}
+          description={bookInfo.description}
+        />
+      )
     }
   }
 
@@ -129,8 +169,7 @@ export default class App extends Component {
   createBook (title, author, description) {
     KinveyRequester.createBook(title, author, description).then(createBookSuccess.bind(this))
 
-    function createBookSuccess (userInfo) {
-      this.saveAuthInSession(userInfo)
+    function createBookSuccess () {
       this.showBooksView()
       this.showInfo('Book created')
     }
@@ -140,8 +179,24 @@ export default class App extends Component {
     this.showView(<EditBookView onsubmit={this.editBook.bind(this)} />)
   }
 
-  editBook (title, author, description) {
+  editBook (bookId, title, author, description) {
+    KinveyRequester.editBook(bookId, title, author, description)
+        .then(editBookSuccess.bind(this))
 
+    function editBookSuccess () {
+      this.showBooksView()
+      this.showInfo('Book created.')
+    }
+  }
+
+  deleteBook (bookId) {
+    KinveyRequester.deleteBook(bookId)
+          .then(deleteBookSuccess.bind(this))
+
+    function deleteBookSuccess () {
+      this.showBooksView()
+      this.showInfo('Book deleted.')
+    }
   }
 
   login (username, password) {
@@ -155,7 +210,7 @@ export default class App extends Component {
   }
 
   register (username, password) {
-    KinveyRequester.loginUser(username, password).then(registerSuccess.bind(this))
+    KinveyRequester.registerUser(username, password).then(registerSuccess.bind(this))
 
     function registerSuccess (userInfo) {
       this.saveAuthInSession(userInfo)
@@ -177,13 +232,13 @@ export default class App extends Component {
   }
 
   logout () {
+    KinveyRequester.logoutUser()
     window.sessionStorage.clear()
-
     this.setState({
       username: null,
       userId: null
     })
-
     this.showHomeView()
+    this.showInfo('You have successfully logged out')
   }
 }

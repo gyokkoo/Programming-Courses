@@ -6,7 +6,6 @@ let KinveyRequester = (function () {
   const appSecret = 'd65a1a31c04d49f7aaadcfaf12754ac4'
   const appAuthHeaders = {
     Authorization: 'Basic ' + btoa(appId + ':' + appSecret)
-
   }
 
   function loginUser (username, password) {
@@ -22,14 +21,14 @@ let KinveyRequester = (function () {
   function registerUser (username, password) {
     return $.ajax({
       method: 'POST',
-      url: baseUrl + 'user/' + appId,
+      url: baseUrl + 'user/' + appId + '/',
       data: JSON.stringify({username, password}),
       contentType: 'application/json',
       headers: appAuthHeaders
     })
   }
 
-  function loadBooks () {
+  function findAllBooks () {
     return $.ajax({
       method: 'GET',
       url: baseUrl + 'appdata/' + appId + '/books',
@@ -37,10 +36,12 @@ let KinveyRequester = (function () {
     })
   }
 
-  function getUserAuthHeaders () {
-    return {
-      Authorization: 'Kinvey ' + window.sessionStorage.getItem('authToken')
-    }
+  function findBookById (bookId) {
+    return $.ajax({
+      method: 'GET',
+      url: baseUrl + 'appdata/' + appId + '/books/' + bookId,
+      headers: getUserAuthHeaders()
+    })
   }
 
   function createBook (title, author, description) {
@@ -53,11 +54,46 @@ let KinveyRequester = (function () {
     })
   }
 
+  function editBook (bookId, title, author, description) {
+    return $.ajax({
+      method: 'PUT',
+      url: baseUrl + 'appdata/' + appId + '/books/' + bookId,
+      headers: getUserAuthHeaders(),
+      data: { title, author, description }
+    })
+  }
+
+  function deleteBook (bookId) {
+    return $.ajax({
+      method: 'DELETE',
+      url: baseUrl + 'appdata/' + appId + '/books/' + bookId,
+      headers: getUserAuthHeaders()
+    })
+  }
+
+  function logoutUser () {
+    return $.ajax({
+      method: 'GET',
+      url: baseUrl + 'user/' + appId + '/_logout',
+      headers: getUserAuthHeaders()
+    })
+  }
+
+  function getUserAuthHeaders () {
+    return {
+      Authorization: 'Kinvey ' + window.sessionStorage.getItem('authToken')
+    }
+  }
+
   return {
     loginUser,
     registerUser,
-    loadBooks,
-    createBook
+    findAllBooks,
+    findBookById,
+    createBook,
+    editBook,
+    deleteBook,
+    logoutUser
   }
 })()
 
