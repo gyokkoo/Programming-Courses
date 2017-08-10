@@ -6,6 +6,13 @@ let todoActions = {
       type: 'CREATE_TODO',
       title
     })
+  },
+
+  completeTodo: (id) => {
+    dispatcher.dispatch({
+      type: 'COMPLETE_TODO',
+      id
+    })
   }
 }
 

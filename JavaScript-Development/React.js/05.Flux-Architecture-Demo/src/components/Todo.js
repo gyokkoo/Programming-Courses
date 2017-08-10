@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
+import TodoActions from '../actions/TodoActions'
+class Todo extends Component {
+  completeTodo (event) {
+    event.preventDefault()
+    TodoActions.completeTodo(this.props.id)
+  }
 
-const Todo = (props) => (
-  <li>
-    {props.title} - {props.completed ? 'DONE' : 'PENDING'}
-  </li>
-)
+  render () {
+    return (
+      <li>
+        {this.props.title} - {this.props.completed ? 'DONE' : (
+          <button onClick={this.completeTodo.bind(this)}>PENDING</button>
+        )}
+      </li>
+    )
+  }
+}
 
 export default Todo

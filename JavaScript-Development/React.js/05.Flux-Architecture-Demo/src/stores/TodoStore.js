@@ -28,10 +28,20 @@ class TodoStore extends EventEmitter {
     this.emit('change')
   }
 
+  completeTodo (id) {
+    const todo = this.todos.find(todo => todo.id === id)
+    todo.completed = true
+    this.emit('change')
+  }
+
   handleAction (action) {
     switch (action.type) {
       case 'CREATE_TODO': {
         this.createTodo(action.title)
+        break
+      }
+      case 'COMPLETE_TODO': {
+        this.completeTodo(action.id)
         break
       }
       default: {
