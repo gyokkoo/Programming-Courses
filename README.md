@@ -11,6 +11,10 @@ Assignments and Exams | Software University
 
 [Node.js and Express.js Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals)
 
+[React.js](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/React.js)
+[React Learning repostitory](https://github.com/nezhdetov/react)
+[React game Project](https://github.com/nezhdetov/playnine)
+
 [Shop Project Back-end](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals/Shop-Stop-Lab)
 
 # Java Development
