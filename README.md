@@ -11,11 +11,12 @@ Assignments and Exams | Software University
 
 [Node.js and Express.js Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals)
 
-[React.js](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/React.js)
-[React Learning repostitory](https://github.com/nezhdetov/react)
-[React game Project](https://github.com/nezhdetov/playnine)
+  - [Shop Project Back-end](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals/Shop-Stop-Lab)
 
-[Shop Project Back-end](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/Node.js-and-Express.js-Fundamentals/Shop-Stop-Lab)
+[React.js](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/React.js)
+  - [React Learning repostitory](https://github.com/nezhdetov/react)
+  - [React Game Project](https://github.com/nezhdetov/playnine)
+
 
 # Java Development
 
@@ -25,7 +26,7 @@ Assignments and Exams | Software University
 
 [Java OOP Advanced](https://github.com/Nezhdetov/Software-University/tree/master/Java-Development/Java-OOP-Advanced)
 
-[Java BashSoft Project](https://github.com/Nezhdetov/Software-University/tree/master/Java-Development/Java-OOP-Advanced/BashSoft)
+ - [Java BashSoft Project](https://github.com/Nezhdetov/Software-University/tree/master/Java-Development/Java-OOP-Advanced/BashSoft)
 
 # Data Structure and Algorithms
 
