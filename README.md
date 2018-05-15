@@ -1,6 +1,3 @@
-# Software-University
-Assignments and Exams | Software University
-
 # JavaScript Development
 
 [JavaScript Fundamentals](https://github.com/Nezhdetov/Software-University/tree/master/JavaScript-Development/JavaScript-Fundamentals)
